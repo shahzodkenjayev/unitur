@@ -9,14 +9,17 @@
 <?php
 function makeconnection()
 {
-	$cn=mysqli_connect("localhost","root","","travel");
-	if(mysqli_connect_errno())
-	{
-		echo "failed to connect to mysqli:".mysqli_connect_error();
-	}
+	$cn = mysqli_connect("127.0.0.1", "root", "", "travel");
+
+if (!$cn) {
+    die("Ma'lumotlar bazasiga ulanishda xatolik: " . mysqli_connect_error());
+} else {
+    echo "Ma'lumotlar bazasiga ulanish muvaffaqiyatli!";
+}
+
 	return $cn;
 }
-$cn=mysqli_connect("localhost","root","","travel");
+$cn=mysqli_connect("127.0.0.1","root","","travel");
 ?>
 </body>
 </html>
