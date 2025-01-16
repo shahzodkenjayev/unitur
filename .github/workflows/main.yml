@@ -11,7 +11,9 @@ jobs:
 
     steps:
       - name: Add SSH host to known_hosts
-        run: ssh-keyscan -H 206.189.114.116 >> ~/.ssh/known_hosts
+        run: |
+          mkdir -p ~/.ssh  # ~/.ssh papkasini yaratish
+          ssh-keyscan -H 206.189.114.116 >> ~/.ssh/known_hosts  # SSH hostni known_hosts fayliga qo'shish
 
       - name: Check out the code
         uses: actions/checkout@v2  # GitHub repozitoriyasidan kodni olish
