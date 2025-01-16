@@ -685,30 +685,36 @@ h6.b-animate.b-from-left.b-delay03
 	top: 0;
 	width: 95.3%;
 	position: absolute;
-	background: rgba(101, 178, 229, 0.93);
-	height: 86%;
-	text-align: center;
+	background: rgba(101, 178,.guide-caption {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    width: 95.3%;
+    background: rgba(101, 178, 229, 0.93);
+    height: 86%;
+    text-align: center;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
-.guide-caption span{
-	background:url('../images/guide-icons2.png') no-repeat 0px 0px;
-	display:inline-block;
-	margin: 0 0.5em;
-	width:57%;
-	height: 52px;
-	display: block;
-	text-align: center;
-	position: absolute;
-	top: 42%;
-	right: 18%;
-	background-size: 100%;
+
+.guide-caption span {
+    background: url('../images/guide-icons2.png') no-repeat center center;
+    background-size: cover; /* Nisbatlarni saqlash */
+    display: block;
+    margin: 0 0.5em;
+    width: 57%;
+    height: 52px;
+    text-align: center;
+    position: absolute;
+    top: 42%;
+    right: 18%;
 }
-.image-grid:hover div.guide-caption{
-	display: block;
-	transition: all 0.3s ease;
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	-o-transition: all 0.3s ease;
+
+.image-grid:hover div.guide-caption {
+    opacity: 1;
+    visibility: visible;
 }
+
 .tour-guides {
 padding-top:6%;
 margin-bottom: 10%;
