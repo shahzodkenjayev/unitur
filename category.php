@@ -38,21 +38,19 @@
 $s = "SELECT * FROM category";
 $result = mysqli_query($cn, $s);
 
-if (!$result) {
-    die('Query failed: ' . mysqli_error($cn));
-}
-
-$r = mysqli_num_rows($result);
-if ($r > 0) {
+// Natijalarni tekshirish
+if (mysqli_num_rows($result) > 0) {
+    // Kategoriyalar mavjud bo'lsa
     while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        // Har bir kategoriya nomini chiqarish
         echo "<tr><td style='padding:5px;'><b><a href='subcat.php?catid=" . $data['Cat_id'] . "'>" . $data['Cat_name'] . "</a></b></td></tr>";
     }
 } else {
+    // Agar kategoriyalar bo'lmasa
     echo "Kategoriyalar mavjud emas.";
 }
 
 mysqli_close($cn);
-
 
 </table>
 
