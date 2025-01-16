@@ -9,18 +9,12 @@
 <?php
 function makeconnection()
 {
-	<?php
-$cn = mysqli_connect("127.0.0.1", "root", "", "travel");
-
-if (!$cn) {
-    die("Ma'lumotlar bazasiga ulanishda xatolik: " . mysqli_connect_error());
-}
-
-$query = "SELECT * FROM category";
-$result = mysqli_query($cn, $query);
+$s = "SELECT * FROM category";
+$result = mysqli_query($cn, $s);
 
 if (mysqli_num_rows($result) > 0) {
-    while ($data = mysqli_fetch_assoc($result)) {
+    // Har bir kategoriyani ko'rsatadi
+    while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
         echo "<p>" . $data['Cat_name'] . "</p>";
     }
 } else {
@@ -29,6 +23,7 @@ if (mysqli_num_rows($result) > 0) {
 
 mysqli_close($cn);
 ?>
+
 
 </body>
 </html>
