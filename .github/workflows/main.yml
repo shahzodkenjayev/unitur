@@ -1,6 +1,3 @@
-- name: Add SSH host to known_hosts
-  run: ssh-keyscan -H 206.189.114.116 >> ~/.ssh/known_hosts
-
 name: Deploy to Server
 
 on:
@@ -13,6 +10,9 @@ jobs:
     runs-on: ubuntu-latest  # Ishlaydigan tizim (Ubuntu ishlatilmoqda)
 
     steps:
+      - name: Add SSH host to known_hosts
+        run: ssh-keyscan -H 206.189.114.116 >> ~/.ssh/known_hosts
+
       - name: Check out the code
         uses: actions/checkout@v2  # GitHub repozitoriyasidan kodni olish
 
