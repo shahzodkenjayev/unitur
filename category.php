@@ -35,6 +35,7 @@
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Kategoriyalar</b></td></tr>
 <?php
 
+<?php
 $s = "SELECT * FROM category";
 $result = mysqli_query($cn, $s);
 
@@ -51,6 +52,8 @@ if (mysqli_num_rows($result) > 0) {
 }
 
 mysqli_close($cn);
+?>
+
 
 ?>
 
