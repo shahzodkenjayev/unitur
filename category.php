@@ -34,28 +34,37 @@
 <table cellpadding="0" cellspacing="0" width="1000px">
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Kategoriyalar</b></td></tr>
 <?php
+// PHP error reporting
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 
-<?php
+// MySQL connection
+$cn = mysqli_connect("localhost", "root", "", "travel");
+if (!$cn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Query to fetch categories
 $s = "SELECT * FROM category";
 $result = mysqli_query($cn, $s);
 
-if (!$result) {
-    die("So‘rovda xatolik: " . mysqli_error($cn));
-}
-
-if (mysqli_num_rows($result) > 0) {
-    while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        echo "<tr><td style='padding:5px;'><b><a href='subcat.php?catid=" . $data['Cat_id'] . "'>" . $data['Cat_name'] . "</a></b></td></tr>";
+if ($result) {
+    // Fetch and display data
+    if (mysqli_num_rows($result) > 0) {
+        while ($data = mysqli_fetch_assoc($result)) {
+            echo "<tr><td style='padding:5px;'><b><a href='subcat.php?catid={$data['Cat_id']}'>{$data['Cat_name']}</a></b></td></tr>";
+        }
+    } else {
+        echo "Kategoriyalar mavjud emas.";
     }
 } else {
-    echo "Kategoriyalar mavjud emas.";
+    echo "MySQL query xato: " . mysqli_error($cn);
 }
 
+// Close connection
 mysqli_close($cn);
 ?>
 
-
-?>
 
 </table>
 
