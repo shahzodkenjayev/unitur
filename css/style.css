@@ -1621,57 +1621,24 @@ margin: 1em 0 0 0;
 .social-icons a span {
 width: 38px;
 }
-        /* Form umumiy styling */
-        form {
-            max-width: 400px !important;
-            margin: 0 auto !important;
-            font-family: Arial, sans-serif !important;
-        }
-        
-        input.text, textarea {
-            width: 100% !important;
-            margin-bottom: 15px !important;
-            padding: 10px !important;
-            font-size: 16px !important;
-            border: 1px solid #ccc !important;
-            border-radius: 5px !important;
-            box-sizing: border-box !important;
-        }
-
-        input.text:focus, textarea:focus {
-            border-color: #007BFF !important;
-            outline: none !important;
-            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5) !important;
-        }
-
-        textarea {
-            resize: none !important;
-            height: 100px !important;
-        }
-
-        /* Yuborish tugmachasi styling */
-        input[type="submit"] {
-            background-color: #007BFF !important;
-            color: #fff !important;
-            font-size: 18px !important;
-            font-weight: bold !important;
-            border: none !important;
-            border-radius: 5px !important;
-            padding: 10px 20px !important;
-            cursor: pointer !important;
-            transition: background-color 0.3s ease, transform 0.2s ease !important;
-        }
-
-        input[type="submit"]:hover {
-            background-color: #0056b3 !important;
-        }
-
-        input[type="submit"]:active {
-            transform: scale(0.98) !important;
-        }
-
-        .clearfix {
-            clear: both !important;
-        }
-
 }
+.custom-button {
+    background-color: #007BFF !important; /* Ko'k rang */
+    color: #fff !important; /* Oq matn */
+    font-size: 18px !important; /* Matn kattaligi */
+    font-weight: bold !important; /* Matnni qalin qilish */
+    border: none !important; /* Tashqi chiziqni olib tashlash */
+    border-radius: 50px !important; /* Oval shakl uchun radius */
+    padding: 10px 30px !important; /* Tugma ichidagi matn joylashuvi */
+    cursor: pointer !important; /* Ko'rsatkichni o'zgartirish */
+    transition: background-color 0.3s ease, transform 0.2s ease !important; /* Animatsiya */
+}
+
+.custom-button:hover {
+    background-color: #0056b3 !important; /* Hover holati uchun quyuqroq ko'k */
+}
+
+.custom-button:active {
+    transform: scale(0.98) !important; /* Bosilganda kichikroq effekt */
+}
+
