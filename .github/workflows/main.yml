@@ -15,10 +15,9 @@ jobs:
 
       - name: Set up SSH
         uses: webfactory/ssh-agent@v0.5.3  # SSH orqali serverga ulanish uchun
-
         with:
           ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}  # GitHub secrets orqali SSH kaliti
 
       - name: Deploy to server
         run: |
-          ssh root@206.189.114.116 'cd /var/www/travel && git pull origin main'  # Serverga kodni push qilish
+          ssh -v root@206.189.114.116 'cd /var/www/travel && git pull origin main'  # Serverga kodni pull qilish
