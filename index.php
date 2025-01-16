@@ -1,9 +1,4 @@
-<!--
-Muallif: W3layouts
-Muallif URL: http://w3layouts.com
-Litsenziya: Creative Commons Attribution 3.0 Unported
-Litsenziya URL: http://creativecommons.org/licenses/by/3.0/
--->
+
 <!DOCTYPE html>
 <html>
 <head>
