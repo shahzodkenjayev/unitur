@@ -997,41 +997,41 @@ border:none;
 outline:none;
 margin-top: 2em;
 }
-.social-icons{
-margin-top:3.5em;
+
+.social-icons {
+    margin-top: 3.5em;
+    float: right;
 }
-.social-icons a span{
-	width:44px;
-	height:39px;
-	background:url('../images/social-icons.png') no-repeat 0px 0px;
-	display:inline-block;
-	margin: 0 0.5em;
+.social-icons a span {
+    width: 44px;
+    height: 39px; /* Bo'shliq olib tashlandi */
+    background: url('../images/social-icons.png') no-repeat 0px 0px;
+    display: inline-block;
+    margin: 0 0.5em;
 }
-.social-icons a span.facebook{
-	background-position: 0px 0px;
+.social-icons a span.facebook {
+    background-position: 0px 0px;
 }
-.social-icons a span.twitter{
-		background-position:-63px 0px;
+.social-icons a span.twitter {
+    background-position: -63px 0px;
 }
-.social-icons a span.googleplus{
-		background-position:-127px 0px;
+.social-icons a span.googleplus {
+    background-position: -127px 0px;
 }
-.social-icons a span.pinterest{
-		background-position: -190px 0px;
+.social-icons a span.pinterest {
+    background-position: -190px 0px;
 }
-.social-icons a span.instagram{
-		background-position:-254px 0px
+.social-icons a span.instagram {
+    background-position: -254px 0px;
 }
-.social-icons a span:hover{
-	opacity:0.4;
+.social-icons a span:hover {
+    opacity: 0.4;
 }
-.social-icons{
-float:right;
+.copyright {
+    background: #F1F2F2;
+    min-height: 48px;
 }
-.copyright{
-background:#F1F2F2;
-min-height:48px;
-}
+
 .copyright p{
 color:#9D9C9C;
 padding:1em 0;
