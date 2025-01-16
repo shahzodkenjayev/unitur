@@ -35,18 +35,23 @@
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Kategoriyalar</b></td></tr>
 <?php
 
-$s="select * from category";
-$result=mysqli_query($cn,$s);
-$r=mysqli_num_rows($result);
-//echo $r;
+$s = "SELECT * FROM category";
+$result = mysqli_query($cn, $s);
 
-while($data=mysqli_fetch_array($result))
-{
-	
-		echo "<tr><td style=' padding:5px;'><b><a href='subcat.php?catid=$data[0]'>$data[1]</a></b></td></tr>";
-
+if (!$result) {
+    die("So‘rovda xatolik: " . mysqli_error($cn));
 }
+
+if (mysqli_num_rows($result) > 0) {
+    while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+        echo "<tr><td style='padding:5px;'><b><a href='subcat.php?catid=" . $data['Cat_id'] . "'>" . $data['Cat_name'] . "</a></b></td></tr>";
+    }
+} else {
+    echo "Kategoriyalar mavjud emas.";
+}
+
 mysqli_close($cn);
+
 ?>
 
 </table>
