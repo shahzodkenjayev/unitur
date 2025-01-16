@@ -35,20 +35,20 @@
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Kategoriyalar</b></td></tr>
 <?php
 
+$s = "SELECT * FROM category"; 
+$result = mysqli_query($cn, $s); 
 
-$s="select * from category";
-$result=mysqli_query($cn,$s);
-$r=mysqli_num_rows($result);
-//echo $r;
-
-while($data=mysqli_fetch_array($result))
-{
-	
-		echo "<tr><td style=' padding:5px;'><b><a href='subcat.php?catid=$data[0]'>$data[1]</a></b></td></tr>";
-
+if (!$result) {
+    die('Query failed: ' . mysqli_error($cn));
 }
+
+while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+    // $data['Cat_id'] va $data['Cat_name'] ustunlaridan foydalanish
+    echo "<tr><td style='padding:5px;'><b><a href='subcat.php?catid=" . $data['Cat_id'] . "'>" . $data['Cat_name'] . "</a></b></td></tr>";
+}
+
 mysqli_close($cn);
-?>
+
 
 </table>
 
