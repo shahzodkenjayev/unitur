@@ -9,17 +9,26 @@
 <?php
 function makeconnection()
 {
-	$cn = mysqli_connect("127.0.0.1", "root", "", "travel");
+	<?php
+$cn = mysqli_connect("127.0.0.1", "root", "", "travel");
 
 if (!$cn) {
     die("Ma'lumotlar bazasiga ulanishda xatolik: " . mysqli_connect_error());
-} else {
-    echo "Ma'lumotlar bazasiga ulanish muvaffaqiyatli!";
 }
 
-	return $cn;
+$query = "SELECT * FROM category";
+$result = mysqli_query($cn, $query);
+
+if (mysqli_num_rows($result) > 0) {
+    while ($data = mysqli_fetch_assoc($result)) {
+        echo "<p>" . $data['Cat_name'] . "</p>";
+    }
+} else {
+    echo "Kategoriyalar mavjud emas.";
 }
-$cn=mysqli_connect("127.0.0.1","root","","travel");
+
+mysqli_close($cn);
 ?>
+
 </body>
 </html>
