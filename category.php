@@ -47,6 +47,7 @@ $result = mysqli_query($cn, $s);
 
 if ($result) {
     if (mysqli_num_rows($result) > 0) {
+        // Loop through the result set
         while ($data = mysqli_fetch_assoc($result)) {
             // Correct way to display Cat_name
             echo "<tr><td style='padding:5px;'><b><a href='subcat.php?catid={$data['Cat_id']}'>{$data['Cat_name']}</a></b></td></tr>";
