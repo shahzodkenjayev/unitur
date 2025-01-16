@@ -1,3 +1,6 @@
+- name: Add SSH host to known_hosts
+  run: ssh-keyscan -H 206.189.114.116 >> ~/.ssh/known_hosts
+
 name: Deploy to Server
 
 on:
