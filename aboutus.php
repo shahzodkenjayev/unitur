@@ -31,7 +31,7 @@
 
 
 
-<div style="width:900px; padding-left:100px">
+<div style="width:900px; padding-left:100px; margin-top:50px;">
 <table cellpadding="0px" cellspacing="0" width="900px">
 <tr><td class="headingText">Biz haqimizda</td></tr>
 <tr><td class="paraText" width="900px">
