@@ -308,8 +308,8 @@ border:1px solid #0056b3;
 .header-info{
 	position: absolute;
 	width: 100%;
-	top: 50%;
-	left: 9%;
+	top: 90%;
+	left: 19%;
 }
 .header-info h2 a{
 display:inline-block;
