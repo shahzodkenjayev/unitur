@@ -1,7 +1,7 @@
 <div style="width:1000px; margin:auto; display:flex; justify-content:space-between; align-items:center;">
     <!-- Asosiy sahifa tugmasi -->
     <a href="index.html" style="text-decoration:none; background:#09F; color:white; padding:10px 20px; border-radius:5px; font-family:Arial, sans-serif; font-size:16px;">
-        Bosh sahifa
+        Asosiy sahifa
     </a>
 
     <!-- Kategoriya jadvali -->
