@@ -35,19 +35,22 @@
 <tr><td style="font-size:20px; font-family:Lucida Calligraphy; color:#09F"><b>Kategoriya</b></td></tr>
 <?php
 
-$s="select * from category";
-$result=mysqli_query($cn,$s);
-$r=mysqli_num_rows($result);
-//echo $r;
+// SQL so'rovini bajarish
+$s = "SELECT * FROM category";
+$result = mysqli_query($cn, $s);
 
-while($data=mysqli_fetch_array($result))
-{
-	
-		echo "<tr><td style=' padding:5px;'><a href='subcat.php?catid=$data[0]'>$data[1]</a></td></tr>";
-
+// Agar so'rov muvaffaqiyatli bo'lsa
+if ($result) {
+    // Natijalarni chiqarish
+    while ($data = mysqli_fetch_assoc($result)) {
+        echo "<tr><td style='padding:5px;'><a href='subcat.php?catid=" . $data['Cat_id'] . "'>" . htmlspecialchars($data['Cat_name']) . "</a></td></tr>";
+    }
+} else {
+    echo "SQL so'rovi bajarilmagan: " . mysqli_error($cn);
 }
 
 ?>
+
 
 </table>
 
@@ -65,7 +68,7 @@ while($data=mysqli_fetch_array($result))
 
 <?php
 
-$s="select * from subcategory where Catid='" .$_GET["catid"] . "'";
+$s="select * from subcategory where Cat_id='" .$_GET["Cat_id"] . "'";
 $result=mysqli_query($cn,$s);
 $r=mysqli_num_rows($result);
 //echo $r;
