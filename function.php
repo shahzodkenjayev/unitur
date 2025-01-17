@@ -2,24 +2,28 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Yangi kategoriya</title>
+<title>Yangi categoriya</title>
 </head>
 
 <body>
 <?php
+// Ma'lumotlar bazasiga ulanish funksiyasi
 function makeconnection()
 {
-	$cn=mysqli_connect("206.189.114.116","root","","travel");
-	if(mysqli_connect_errno())
-	{
-		echo "failed to connect to mysqli:".mysqli_connect_error();
-	}
-	return $cn;
+    $cn = mysqli_connect("localhost", "root", "", "travel");
+    if (mysqli_connect_errno()) {
+        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    }
+    return $cn;
 }
-$cn=mysqli_connect("206.189.114.116","root","","travel");
+
+// Ulanishni tekshirish va holatini ko'rsatish
+$cn = makeconnection();
+if ($cn) {
+    echo "<p style='color: green;'>Bazaga muvaffaqiyatli ulandi!</p>";
+} else {
+    echo "<p style='color: red;'>Bazaga ulanishda xatolik yuz berdi!</p>";
+}
 ?>
-
-
-
 </body>
 </html>
