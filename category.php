@@ -20,18 +20,40 @@
     <div style="height:50px"></div>
     <div style="width:1000px; margin:auto; display:flex;">
 
-        <!-- Kategoriyalar -->
+        <!-- Kategoriya jadvali -->
         <div style="width:30%; padding:10px;">
             <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
-            <ul id="nav">
-                <li><a href="subcat.php?catid=1">Oilaviy sayohatlar</a></li>
-                <li><a href="subcat.php?catid=2">Diniy sayohatlar</a></li>
-                <li><a href="subcat.php?catid=3">Sarguzashtli sayohatlar</a></li>
-                <li><a href="subcat.php?catid=4">Maxsus tadbirlarga sayohatlar</a></li>
-                <li><a href="subcat.php?catid=5">O'rmonlarga sayohat</a></li>
-                <li><a href="subcat.php?catid=6">Dam olish kunlari sayohat</a></li>
-                <li><a href="subcat.php?catid=7">Kichik guruh sayohatlari</a></li>
-            </ul>
+            <?php
+            // MySQL ulanish
+            $cn = mysqli_connect("localhost", "root", "", "travel");
+
+            if (!$cn) {
+                die("Ulanishda xato: " . mysqli_connect_error());
+            }
+
+            // Kategoriyalarni olish
+            $s = "SELECT * FROM category";
+            $result = mysqli_query($cn, $s);
+
+            if ($result) {
+                if (mysqli_num_rows($result) > 0) {
+                    echo "<table border='1' style='border-collapse:collapse; width:100%;'>";
+                    while ($data = mysqli_fetch_assoc($result)) {
+                        echo "<tr><td style='padding:10px;'><b><a href='subcat.php?catid={$data['Cat_id']}'>" . 
+                        htmlspecialchars($data['Cat_name']) . 
+                        "</a></b></td></tr>";
+                    }
+                    echo "</table>";
+                } else {
+                    echo "<p>Kategoriyalar mavjud emas.</p>";
+                }
+            } else {
+                echo "<p>MySQL so'rov xato: " . mysqli_error($cn) . "</p>";
+            }
+
+            // Ulanishni yopish
+            mysqli_close($cn);
+            ?>
         </div>
 
         <!-- UNITUR ma'lumotlari -->
