@@ -25,7 +25,7 @@
             <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
         <?php
 // Ma'lumotlar bazasiga ulanish
-$cn = mysqli_connect("host", "user", "password", "database");
+$cn = mysqli_connect("206.189.114.116", "root", "", "travel");
 
 if (!$cn) {
     die("Ma'lumotlar bazasiga ulanishda xato: " . mysqli_connect_error());
