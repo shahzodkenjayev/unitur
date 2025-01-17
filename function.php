@@ -7,22 +7,17 @@
 
 <body>
 <?php
-function makeconnection()
-{
-$s = "SELECT * FROM category";
-$result = mysqli_query($cn, $s);
+function makeconnection() {
+    $cn = mysqli_connect("localhost", "root", "", "travel");
 
-if (mysqli_num_rows($result) > 0) {
-    // Har bir kategoriyani ko'rsatadi
-    while ($data = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-        echo "<p>" . $data['Cat_name'] . "</p>";
+    if (!$cn) {
+        die("Ulanishda xato: " . mysqli_connect_error());
     }
-} else {
-    echo "Kategoriyalar mavjud emas.";
-}
 
-mysqli_close($cn);
+    return $cn;
+}
 ?>
+
 
 
 </body>
