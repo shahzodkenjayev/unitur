@@ -7,7 +7,7 @@
 
 <body>
 <?php
-$cn=mysqli_connect("localhost","root","","tourandtravel");
+$cn=mysqli_connect("206.189.114.116","root","","tourandtravel");
 $s="select * from advertisement";
 $result=mysqli_query($cn,$s);
 
