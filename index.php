@@ -196,7 +196,6 @@ $s = "insert into contactus(Name, Phno, Email, Message) values('$t1', '$t2', '$t
 mysqli_query($cn, $s);
 
                         mysqli_close($cn);
-                        echo "<script>alert('Ma\'lumotlar saqlandi');</script>";
                     }
                     ?>
                     <form method="post">
