@@ -24,36 +24,35 @@
         <div style="width:30%; padding:10px;">
             <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
             <?php
-            // MySQL ulanish
-            $cn = mysqli_connect("localhost", "root", "", "travel");
+include('function.php');
 
-            if (!$cn) {
-                die("Ulanishda xato: " . mysqli_connect_error());
-            }
+// Ulanishni olish
+$cn = makeconnection();
 
-            // Kategoriyalarni olish
-            $s = "SELECT * FROM category";
-            $result = mysqli_query($cn, $s);
+// Kategoriyalarni olish
+$s = "SELECT * FROM category";
+$result = mysqli_query($cn, $s);
 
-            if ($result) {
-                if (mysqli_num_rows($result) > 0) {
-                    echo "<table border='1' style='border-collapse:collapse; width:100%;'>";
-                    while ($data = mysqli_fetch_assoc($result)) {
-                        echo "<tr><td style='padding:10px;'><b><a href='subcat.php?catid={$data['Cat_id']}'>" . 
-                        htmlspecialchars($data['Cat_name']) . 
-                        "</a></b></td></tr>";
-                    }
-                    echo "</table>";
-                } else {
-                    echo "<p>Kategoriyalar mavjud emas.</p>";
-                }
-            } else {
-                echo "<p>MySQL so'rov xato: " . mysqli_error($cn) . "</p>";
-            }
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        echo "<table border='1' style='border-collapse:collapse; width:100%;'>";
+        while ($data = mysqli_fetch_assoc($result)) {
+            echo "<tr><td style='padding:10px;'><b><a href='subcat.php?catid={$data['Cat_id']}'>" . 
+            htmlspecialchars($data['Cat_name']) . 
+            "</a></b></td></tr>";
+        }
+        echo "</table>";
+    } else {
+        echo "<p>Kategoriyalar mavjud emas.</p>";
+    }
+} else {
+    echo "<p>MySQL so'rov xato: " . mysqli_error($cn) . "</p>";
+}
 
-            // Ulanishni yopish
-            mysqli_close($cn);
-            ?>
+// Ulanishni yopish
+mysqli_close($cn);
+?>
+
         </div>
 
         <!-- UNITUR ma'lumotlari -->
