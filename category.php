@@ -23,34 +23,46 @@
         <!-- Kategoriya jadvali -->
         <div style="width:30%; padding:10px;">
             <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
-        <?php
-// Ma'lumotlar bazasiga ulanish
-$cn = mysqli_connect("206.189.114.116", "root", "", "travel");
+       <?php
+// Xatoliklarni ko'rsatishni yoqish
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
 
+// Ma'lumotlar bazasiga ulanish
+$cn = mysqli_connect("host", "user", "password", "database");
+
+// Agar ulanishda muammo bo'lsa, xatolikni ko'rsatish
 if (!$cn) {
     die("Ma'lumotlar bazasiga ulanishda xato: " . mysqli_connect_error());
+} else {
+    echo "Ma'lumotlar bazasiga ulanish muvaffaqiyatli!<br>";
 }
 
-// Kategoriyalarni olish
-$query = "SELECT * FROM categories"; // Kategoriyalar jadvali nomini tekshirib ko'ring
+// SQL so'rovini bajarish
+$query = "SELECT * FROM categories"; // To'g'ri jadval nomi va ustun nomini ishlatish zarur
 $result = mysqli_query($cn, $query);
 
+// Agar so'rov muvaffaqiyatli bo'lsa
 if ($result) {
+    // Agar kategoriyalar mavjud bo'lsa, ularni chiqarish
     if (mysqli_num_rows($result) > 0) {
-        // Kategoriyalarni chiqarish
+        echo "<ul>";
         while ($data = mysqli_fetch_assoc($result)) {
-            echo htmlspecialchars($data['Cat_name']) . "<br>";
+            echo "<li>" . htmlspecialchars($data['Cat_name']) . "</li>";
         }
+        echo "</ul>";
     } else {
         echo "Kategoriyalar mavjud emas.";
     }
 } else {
+    // Agar so'rov bajarilmagan bo'lsa, xatolikni ko'rsatish
     echo "SQL so'rovi bajarilmagan: " . mysqli_error($cn);
 }
 
 // Ulanishni yopish
 mysqli_close($cn);
 ?>
+
 
 
 
