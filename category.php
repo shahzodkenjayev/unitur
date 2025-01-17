@@ -23,33 +23,41 @@
         <!-- Kategoriya jadvali -->
         <div style="width:30%; padding:10px;">
             <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
-            <?php
-            // Bazaga ulanish
-            $cn = makeconnection();
+        <?php
+// Ma'lumotlar bazasiga ulanish
+$cn = mysqli_connect("host", "user", "password", "database");
 
-            // Kategoriyalarni olish
-            $query = "SELECT * FROM category";
-            $result = mysqli_query($cn, $query);
+if (!$cn) {
+    die("Ma'lumotlar bazasiga ulanishda xato: " . mysqli_connect_error());
+}
 
-            if ($result && mysqli_num_rows($result) > 0) {
-                echo "<table border='1' style='border-collapse:collapse; width:100%;'>";
-                while ($data = mysqli_fetch_assoc($result)) {
-                    echo "<tr>
-                            <td style='padding:10px;'>
-                                <b><a href='subcat.php?catid=" . htmlspecialchars($data['Cat_id']) . "'>" .
-                                htmlspecialchars($data['Cat_name']) .
-                                "</a></b>
-                            </td>
-                          </tr>";
-                }
-                echo "</table>";
-            } else {
-                echo "<p>Kategoriyalar mavjud emas.</p>";
-            }
+// Kategoriyalarni olish
+$query = "SELECT * FROM categories"; // Kategoriyalar jadvali nomini tekshirib ko'ring
+$result = mysqli_query($cn, $query);
 
-            // Ulanishni yopish
-            mysqli_close($cn);
-            ?>
+if ($result) {
+    if (mysqli_num_rows($result) > 0) {
+        // Kategoriyalarni chiqarish
+        while ($data = mysqli_fetch_assoc($result)) {
+            echo htmlspecialchars($data['Cat_name']) . "<br>";
+        }
+    } else {
+        echo "Kategoriyalar mavjud emas.";
+    }
+} else {
+    echo "SQL so'rovi bajarilmagan: " . mysqli_error($cn);
+}
+
+// Ulanishni yopish
+mysqli_close($cn);
+?>
+
+
+
+
+
+
+            
         </div>
 
         <!-- UNITUR ma'lumotlari -->
