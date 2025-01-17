@@ -9,14 +9,14 @@
 <?php
 function makeconnection()
 {
-	$cn=mysqli_connect("localhost","root","","travel");
+	$cn=mysqli_connect("206.189.114.116","root","","travel");
 	if(mysqli_connect_errno())
 	{
 		echo "failed to connect to mysqli:".mysqli_connect_error();
 	}
 	return $cn;
 }
-$cn=mysqli_connect("localhost","root","","travel");
+$cn=mysqli_connect("206.189.114.116","root","","travel");
 ?>
 
 
