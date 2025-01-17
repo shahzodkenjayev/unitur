@@ -33,7 +33,9 @@
 
 <table cellpadding="0" cellspacing="0" width="1000px">
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Kategoriyalar</b></td></tr>
-<?php
+
+
+ <?php
 // MySQL connection
 $cn = mysqli_connect("localhost", "root", "", "travel");
 
@@ -47,9 +49,10 @@ $result = mysqli_query($cn, $s);
 
 if ($result) {
     if (mysqli_num_rows($result) > 0) {
-        echo "<table>"; // Jadval boshlanishi
+        echo "<table border='1'>"; // Jadval boshlanishi
+        echo "<tr><th>Kategoriyalar</th></tr>";
         while ($data = mysqli_fetch_assoc($result)) {
-            echo "<tr><td style='padding:5px;'><b><a href='subcat.php?catid=" . htmlspecialchars($data['Cat_id']) . "'>" . htmlspecialchars($data['Cat_name']) . "</a></b></td></tr>";
+            echo "<tr><td>" . htmlspecialchars($data['Cat_name']) . "</td></tr>";
         }
         echo "</table>"; // Jadval tugashi
     } else {
@@ -62,6 +65,7 @@ if ($result) {
 // Close connection
 mysqli_close($cn);
 ?>
+
 
 
 
