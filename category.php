@@ -20,56 +20,18 @@
     <div style="height:50px"></div>
     <div style="width:1000px; margin:auto; display:flex;">
 
-        <!-- Kategoriya jadvali -->
+        <!-- Kategoriyalar -->
         <div style="width:30%; padding:10px;">
             <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
-       <?php
-// Xatoliklarni ko'rsatishni yoqish
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
-
-// Ma'lumotlar bazasiga ulanish
-$cn = mysqli_connect("localhost", "root", "", "travel");
-
-// Agar ulanishda muammo bo'lsa, xatolikni ko'rsatish
-if (!$cn) {
-    die("Ma'lumotlar bazasiga ulanishda xato: " . mysqli_connect_error());
-} else {
-    echo "Ma'lumotlar bazasiga ulanish muvaffaqiyatli!<br>";
-}
-
-// SQL so'rovini bajarish
-$query = "SELECT * FROM categories"; // To'g'ri jadval nomi va ustun nomini ishlatish zarur
-$result = mysqli_query($cn, $query);
-
-// Agar so'rov muvaffaqiyatli bo'lsa
-if ($result) {
-    // Agar kategoriyalar mavjud bo'lsa, ularni chiqarish
-    if (mysqli_num_rows($result) > 0) {
-        echo "<ul>";
-        while ($data = mysqli_fetch_assoc($result)) {
-            echo "<li>" . htmlspecialchars($data['Cat_name']) . "</li>";
-        }
-        echo "</ul>";
-    } else {
-        echo "Kategoriyalar mavjud emas.";
-    }
-} else {
-    // Agar so'rov bajarilmagan bo'lsa, xatolikni ko'rsatish
-    echo "SQL so'rovi bajarilmagan: " . mysqli_error($cn);
-}
-
-// Ulanishni yopish
-mysqli_close($cn);
-?>
-
-
-
-
-
-
-
-            
+            <ul id="nav">
+                <li><a href="subcat.php?catid=1">Oilaviy sayohatlar</a></li>
+                <li><a href="subcat.php?catid=2">Diniy sayohatlar</a></li>
+                <li><a href="subcat.php?catid=3">Sarguzashtli sayohatlar</a></li>
+                <li><a href="subcat.php?catid=4">Maxsus tadbirlarga sayohatlar</a></li>
+                <li><a href="subcat.php?catid=5">O'rmonlarga sayohat</a></li>
+                <li><a href="subcat.php?catid=6">Dam olish kunlari sayohat</a></li>
+                <li><a href="subcat.php?catid=7">Kichik guruh sayohatlari</a></li>
+            </ul>
         </div>
 
         <!-- UNITUR ma'lumotlari -->
