@@ -81,6 +81,9 @@ font-weight:400;
 .top-nav ul li.active a,.top-nav ul li a:hover,#nav .current a{
 border:1px solid #0056b3;
 }
+#nav li a[href="category.php"]:hover {
+    border: 1px solid #0056b3; /* Kategoriyalar tugmasi ustiga sichqoncha kelsa chegara ko'rsatiladi */
+}
 .fixed{
 	position: fixed;
 	top: 0;
