@@ -1,6 +1,6 @@
 <div style="width:1000px; margin:auto; display:flex; justify-content:space-between; align-items:center;">
     <!-- Asosiy sahifa tugmasi -->
-    <a href="index.php" style="text-decoration:none; background:#09F; color:white; padding:10px 20px; border-radius:5px; font-family:Arial, sans-serif; font-size:16px;">
+    <a href="index.html" style="text-decoration:none; background:#09F; color:white; padding:10px 20px; border-radius:5px; font-family:Arial, sans-serif; font-size:16px;">
         Bosh sahifa
     </a>
 
@@ -9,7 +9,7 @@
         <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
         <?php
         // MySQL ulanish
-        $cn = mysqli_connect("localhost", "root", "", "travel");
+        $cn = mysqli_connect("206.189.114.116", "root", "", "travel");
 
         if (!$cn) {
             die("Ulanishda xato: " . mysqli_connect_error());
