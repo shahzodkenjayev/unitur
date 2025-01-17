@@ -308,8 +308,8 @@ border:1px solid #0056b3;
 .header-info{
 	position: absolute;
 	width: 100%;
-	top: 90%;
-	left: 19%;
+	top: 50%;
+	left: 9%;
 }
 .header-info h2 a{
 display:inline-block;
@@ -1172,7 +1172,7 @@ padding: 1em 0;
 }
 .top-nav ul li a {
 padding: 0.4em 1em;
-font-size: 1em;
+font-size: 0.4em;
 }
 .callbacks .caption {
 top: 46%;
