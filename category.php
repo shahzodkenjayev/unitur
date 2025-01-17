@@ -9,7 +9,7 @@
         <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
         <?php
         // MySQL ulanish
-        $cn = mysqli_connect("127.0.0.1", "root", "", "travel");
+        $cn = mysqli_connect("localhost", "root", "", "travel");
 
         if (!$cn) {
             die("Ulanishda xato: " . mysqli_connect_error());
