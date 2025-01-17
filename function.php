@@ -7,16 +7,44 @@
 
 <body>
 <?php
-// Ma'lumotlar bazasiga ulanish funksiyasi
-function makeconnection()
-{
-    $cn = mysqli_connect("localhost", "root", "", "travel");
-    if (!$cn) {
-        die("MySQL ulanishda xatolik: " . mysqli_connect_error());
-    }
-    return $cn;
+// MySQL ulanishi
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "travel";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
+
+// Kategoriyalarni olish
+function getCategories() {
+    global $conn;
+    $sql = "SELECT * FROM category";
+    $result = $conn->query($sql);
+    $categories = [];
+    while ($row = $result->fetch_assoc()) {
+        $categories[] = $row;
+    }
+    return $categories;
+}
+
+// Subkategoriyalarni olish
+function getSubcategoriesByCategory($catid) {
+    global $conn;
+    $sql = "SELECT * FROM subcategory WHERE Catid = $catid";
+    $result = $conn->query($sql);
+    $subcategories = [];
+    while ($row = $result->fetch_assoc()) {
+        $subcategories[] = $row;
+    }
+    return $subcategories;
+}
+
+// Boshqa kerakli funksiyalarni qo'shish mumkin
 ?>
+
 
 </body>
 </html>
