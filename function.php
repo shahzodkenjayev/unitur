@@ -11,19 +11,12 @@
 function makeconnection()
 {
     $cn = mysqli_connect("localhost", "root", "", "travel");
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+    if (!$cn) {
+        die("MySQL ulanishda xatolik: " . mysqli_connect_error());
     }
     return $cn;
 }
-
-// Ulanishni tekshirish va holatini ko'rsatish
-$cn = makeconnection();
-if ($cn) {
-    echo "<p style='color: green;'>Bazaga muvaffaqiyatli ulandi!</p>";
-} else {
-    echo "<p style='color: red;'>Bazaga ulanishda xatolik yuz berdi!</p>";
-}
 ?>
+
 </body>
 </html>
