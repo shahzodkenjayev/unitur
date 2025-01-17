@@ -29,7 +29,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // Ma'lumotlar bazasiga ulanish
-$cn = mysqli_connect("host", "user", "password", "database");
+$cn = mysqli_connect("localhost", "root", "", "travel");
 
 // Agar ulanishda muammo bo'lsa, xatolikni ko'rsatish
 if (!$cn) {
