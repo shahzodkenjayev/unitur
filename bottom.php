@@ -6,7 +6,7 @@
 			 <p style="text-align:justify">Unitur.uz sizning keyingi sayohatingiz uchun sayohat rahbaringiz. So'nggi yillarda amerikalika, avstraliya va ispaniya va yaqin osiyoning eng muhim joylariga sayohatlar taklif qildik. Bu ham siz uchun, shuning uchun siz keyingi sayohatingiz uchun foydali ma'lumotlarni topishingiz mumkin. Bu mening istagim.</p>
 			 </div>
 			 <div class="col-md-4 fotter-middle">
-				 <h3>Bizning Sayohatlarimiz Haqida Savollar?</h3>
+				 <h3>Sayohat haqida savollaringiz bormi?</h3>
 				 <div class="footer-list">
 						<ul>
                         <li style="text-align:justify"><a href="#"><span></span>
