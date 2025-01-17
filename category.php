@@ -31,7 +31,7 @@
                 die("Ulanishda xato: " . mysqli_connect_error());
             }
 
-            // Kategoriyalarni olish
+            // Kategoriyalarni olish ddd
             $s = "SELECT * FROM category";
             $result = mysqli_query($cn, $s);
 
