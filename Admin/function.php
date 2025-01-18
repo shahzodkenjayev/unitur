@@ -7,17 +7,20 @@
 
 <body>
 <?php
-function makeconnection()
-{
-	$cn=mysqli_connect("localhost","root","profi117","travel");
-	if(mysqli_connect_errno())
-	{
-		echo "failed to connect to mysqli:".mysqli_connect_error();
-	}
-	return $cn;
-}
+function makeconnection() {
+    $host = 'localhost';
+    $username = 'root';
+    $password = 'profi117'; // Bu yerda yangi parolni yozing
+    $database = 'travel'; // Ma'lumotlar bazasining nomi
 
-$cn=mysqli_connect("localhost","root","profi117","travel");
+    $cn = mysqli_connect($host, $username, $password, $database);
+
+    if (!$cn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    return $cn;
+}
 ?>
 </body>
 </html>
