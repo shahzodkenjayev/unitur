@@ -10,7 +10,7 @@
 // Ma'lumotlar bazasiga ulanish funksiyasi
 function makeconnection()
 {
-    $cn = mysqli_connect("localhost", "root", "", "travel");
+    $cn = mysqli_connect("localhost", "root", "profi117", "travel");
     if (mysqli_connect_errno()) {
         echo "Failed to connect to MySQL: " . mysqli_connect_error();
     }
