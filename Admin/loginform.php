@@ -37,29 +37,43 @@ session_start();
 
 <?php include('function.php'); ?>
 <?php
-$_SESSION['loginstatus']="";
-if(isset($_POST["sbmt"]))
-{
-	$cn=makeconnection();
-	$s="select * from users where Username='" . $_POST["t1"] . "' and Pwd='" . $_POST["t2"] ."'";
-	
-	$q=mysqli_query($cn,$s);
-	$r=mysqli_num_rows($q);
-$data=mysqli_fetch_array($q);
-	mysqli_close($cn);
-	if($r>0)
-	{
-		$_SESSION["Username"]= $_POST["t1"];
-		$_SESSION["usertype"]=$data[2];
-		$_SESSION['loginstatus']="yes";
-		header("location:index.php");
-	}
-	else
-	{
-	echo "<script>alert('Invalid User Name or Password');</script>";
-}
+session_start();
+$_SESSION['loginstatus'] = "";
+if (isset($_POST["sbmt"])) {
+    // Ma'lumotlar bazasiga ulanish
+    $cn = makeconnection();
+
+    // Foydalanuvchi nomini va parolni olish
+    $username = mysqli_real_escape_string($cn, $_POST["t1"]);
+    $password = mysqli_real_escape_string($cn, $_POST["t2"]);
+
+    // SQL so'rovi
+    $s = "SELECT * FROM users WHERE Username = '$username'";
+
+    $q = mysqli_query($cn, $s);
+    $r = mysqli_num_rows($q);
+    $data = mysqli_fetch_array($q);
+    mysqli_close($cn);
+
+    if ($r > 0) {
+        // Parolni tekshirish
+        if (password_verify($password, $data['Pwd'])) {
+            // Parol to'g'ri bo'lsa, session yaratish
+            $_SESSION["Username"] = $username;
+            $_SESSION["usertype"] = $data[2];  // Masalan, 2-ustun foydalanuvchi turi
+            $_SESSION['loginstatus'] = "yes";
+            header("location:index.php");
+        } else {
+            // Parol noto'g'ri
+            echo "<script>alert('Invalid User Name or Password');</script>";
+        }
+    } else {
+        // Foydalanuvchi topilmasa
+        echo "<script>alert('Invalid User Name or Password');</script>";
+    }
 }
 ?>
+
 
 
 
