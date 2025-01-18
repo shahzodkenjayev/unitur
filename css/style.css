@@ -15,13 +15,13 @@
 /* Mobil qurilmalar uchun: */
 @media (max-width: 768px) {
     .top-nav {
-        text-align: left;  /* Markazga emas, chapga joylashtirish */
-        padding-left: 20px; /* Logo va menyu uchun chapdan bo'shliq */
+        display: flex;
+        justify-content: space-between; /* Barcha elementlarni o'ng va chapga joylashtirish */
+        align-items: center;
     }
 
-    .logo img {
-        width: 100px; /* Logotipni kichraytirish */
-        height: auto;
+    .logo {
+        margin-right: 20px; /* Logo va menyu orasida bo'shliq */
     }
 
     .menu ul {
@@ -40,18 +40,50 @@
         font-size: 16px; /* Fontni kichraytirish */
         text-decoration: none;
     }
-}
 
-/* Kichik ekranlar (smartfonlar) uchun */
-@media (max-width: 480px) {
-    .logo img {
-        width: 80px; /* Logotipni yanada kichraytirish */
-    }
-
-    .menu ul li a {
-        font-size: 14px; /* Fontni yanada kichraytirish */
+    .menu-toggle {
+        display: block; /* Mobil qurilmada hamburger menyu ko'rsatish */
+        cursor: pointer;
     }
 }
+
+/* Desktop va mobil qurilmalar uchun umumiy uslublar */
+.top-nav {
+    display: flex;
+    justify-content: space-between; /* Elementlarni chap va o'ngga joylashtirish */
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-start; /* Menyu elementlarini chapga joylashtirish */
+}
+
+.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 0 15px; /* Har bir menyu elementining orasida bo'shliq */
+}
+
+.menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* O'ng tarafga joylashadigan ikonka uchun */
+.icon-container {
+    display: flex;
+    justify-content: flex-end; /* Ikonkani o'ngga joylashtirish */
+    align-items: center;
+    margin-left: 20px; /* Ikonkadan chapdagi bo'shliq */
+}
+
+
 .paraText{
 line-height:25px;
 padding:10px;
