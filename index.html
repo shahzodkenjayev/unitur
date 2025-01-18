@@ -21,31 +21,80 @@
 </head>
 <body>
 <!--header-->
-<!--sticky-->
-	 <div class="header-top">
-		 <!--container-->
-		  <div class="container">
-			 <div class="top-nav">
-						<div class="logo">
-						<a href="#"><img src="images/logo.png" id="section-1" width="120" height="25" class="img-responsive" alt="UNITUR"/></a>
-						</div>
-						<div class="menu">
-						<ul id="nav">
-							 <li><a href="#section-1">Bosh sahifa</a></li>
-							 <li><a href="#section-2">Biz haqimizda</a></li>
-							 <li><a href="#section-3">Eng mashhur sayohatlar</a></li>
-							 <li><a href="category.php">Kategoriyalar</a></li>
-							 <li><a href="#section-4">Reklamalar</a></li>
-							 <li><a href="#section-5">Aloqa</a></li>
-						 </ul>
-						 </div>
-			 </div>
-			  <div class="clearfix"> </div>
-			 
+<style>
+/* Mobil qurilmalar uchun moslashuv */
+@media (max-width: 768px) {
+    .top-nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .logo {
+        margin-bottom: 10px;
+    }
+    .menu {
+        display: none; /* Menyu standart ko'rinishda yashirin bo'ladi */
+    }
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+    .menu ul li {
+        list-style: none;
+        margin: 10px 0;
+    }
+    .menu ul li a {
+        text-decoration: none;
+        color: #333;
+        font-size: 16px;
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+</style>
 
-		 </div>
-		 <!--/container-->
-	 </div>
+<div class="header-top">
+    <!--container-->
+    <div class="container">
+        <div class="top-nav">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" id="section-1" width="120" height="25" class="img-responsive" alt="UNITUR"/></a>
+            </div>
+            <div class="menu-toggle">☰ Menyu</div>
+            <div class="menu">
+                <ul id="nav">
+                    <li><a href="#section-1">Bosh sahifa</a></li>
+                    <li><a href="#section-2">Biz haqimizda</a></li>
+                    <li><a href="#section-3">Eng mashhur sayohatlar</a></li>
+                    <li><a href="category.php">Kategoriyalar</a></li>
+                    <li><a href="#section-4">Reklamalar</a></li>
+                    <li><a href="#section-5">Aloqa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!--/container-->
+</div>
+
+<script>
+// Menyu ko'rinishini boshqarish uchun skript
+const menuToggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.menu');
+
+menuToggle.addEventListener('click', () => {
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
+});
+</script>
+
 <!--/sticky-->
 <!---banner--->
 <!----start-slider-script---->
