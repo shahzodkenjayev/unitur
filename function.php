@@ -7,23 +7,21 @@
 
 <body>
 <?php
-// Ma'lumotlar bazasiga ulanish funksiyasi
-function makeconnection()
-{
-    $cn = mysqli_connect("localhost", "root", "profi117", "travel");
-    if (mysqli_connect_errno()) {
-        echo "Failed to connect to MySQL: " . mysqli_connect_error();
+function makeconnection() {
+    $host = 'localhost';
+    $username = 'root';
+    $password = 'profi117'; // Bu yerda yangi parolni yozing
+    $database = 'travel'; // Ma'lumotlar bazasining nomi
+
+    $cn = mysqli_connect($host, $username, $password, $database);
+
+    if (!$cn) {
+        die("Connection failed: " . mysqli_connect_error());
     }
+
     return $cn;
 }
-
-// Ulanishni tekshirish va holatini ko'rsatish
-$cn = makeconnection();
-if ($cn) {
-    echo "<p style='color: green;'>Bazaga muvaffaqiyatli ulandi!</p>";
-} else {
-    echo "<p style='color: red;'>Bazaga ulanishda xatolik yuz berdi!</p>";
-}
 ?>
+
 </body>
 </html>
