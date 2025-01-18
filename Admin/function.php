@@ -9,7 +9,7 @@
 <?php
 function makeconnection()
 {
-	$cn=mysqli_connect("localhost","root","","travel");
+	$cn=mysqli_connect("localhost","root","profi117","travel");
 	if(mysqli_connect_errno())
 	{
 		echo "failed to connect to mysqli:".mysqli_connect_error();
@@ -17,7 +17,7 @@ function makeconnection()
 	return $cn;
 }
 
-$cn=mysqli_connect("localhost","root","","travel");
+$cn=mysqli_connect("localhost","root","profi117","travel");
 ?>
 </body>
 </html>
