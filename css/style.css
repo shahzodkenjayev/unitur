@@ -1424,8 +1424,8 @@ padding: 0 4em 0 2em;
 }
 @media(max-width:320px){
 .logo img {
-width: 4%;
-margin-left: 9%;
+width: 0%;
+margin-left: 0%;
 }
 .fixed div.fixed-header {
 width: 90%;
