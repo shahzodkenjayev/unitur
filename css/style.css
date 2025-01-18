@@ -1319,9 +1319,9 @@ font-size: 1em;
 }
 @media(max-width:480px) {
     .logo img {
-        width: 40%;
+        width: 90%;
         display: block;
-        margin-left: 65%; /* yoki margin: 0 auto; agar markazlashtirishni xohlasangiz */
+        margin-left: 5%; /* yoki margin: 0 auto; agar markazlashtirishni xohlasangiz */
     }
 }
 
