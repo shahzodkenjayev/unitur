@@ -16,20 +16,14 @@
 @media (max-width: 768px) {
     .top-nav {
         display: flex;
-        justify-content: space-between; /* Barcha elementlarni o'ng va chapga joylashtirish */
+        justify-content: space-between;
         align-items: center;
     }
 
-    .logo {
-        margin-right: 20px; /* Logo va menyu orasida bo'shliq */
-    }
-
     .menu ul {
+        display: none; /* Mobil qurilmalarda dastlab menyuni yashirish */
+        flex-direction: column; /* Menyu elementlarini vertikal joylashtirish */
         padding: 0;
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start; /* Menyuni chapga joylashtirish */
     }
 
     .menu ul li {
@@ -37,50 +31,20 @@
     }
 
     .menu ul li a {
-        font-size: 16px; /* Fontni kichraytirish */
+        font-size: 16px;
         text-decoration: none;
     }
 
+    /* Hamburger iconni ko'rsatish */
     .menu-toggle {
-        display: block; /* Mobil qurilmada hamburger menyu ko'rsatish */
+        display: block;
         cursor: pointer;
+        font-size: 30px;
     }
-}
 
-/* Desktop va mobil qurilmalar uchun umumiy uslublar */
-.top-nav {
-    display: flex;
-    justify-content: space-between; /* Elementlarni chap va o'ngga joylashtirish */
-    align-items: center;
-}
-
-.menu {
-    display: flex;
-    justify-content: flex-start; /* Menyu elementlarini chapga joylashtirish */
-}
-
-.menu ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.menu ul li {
-    margin: 0 15px; /* Har bir menyu elementining orasida bo'shliq */
-}
-
-.menu ul li a {
-    text-decoration: none;
-    font-size: 16px;
-}
-
-/* O'ng tarafga joylashadigan ikonka uchun */
-.icon-container {
-    display: flex;
-    justify-content: flex-end; /* Ikonkani o'ngga joylashtirish */
-    align-items: center;
-    margin-left: 20px; /* Ikonkadan chapdagi bo'shliq */
+    .menu ul.show {
+        display: flex; /* Menu tugmasiga bosganda menyuni ko'rsatish */
+    }
 }
 
 
