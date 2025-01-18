@@ -18,35 +18,34 @@ padding:10px;
 text-align:justify;
 }
 
-/* 480px va undan kichik ekranlar uchun */
-@media (max-width: 480px) {
-    .top-nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    
-    .logo {
-        order: 1; /* Logotipni eng yuqoriga olib kelish */
-    }
-    
-    .menu {
-        order: 2; /* Menyuni logotipdan keyin joylashtirish */
-        position: relative;
+/* Boshqa ekran o'lchamlari uchun */
+.menu-icon {
+    display: none; /* Defaultda icon yashirilgan */
+}
+
+/* Mobil qurilma uchun icon ko'rsatish */
+@media (max-width: 1024px) {
+    .menu-icon {
+        display: block; /* Icon faqat mobil qurilmada ko'rinadi */
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
     }
 
+    /* Menu o'ngdan chiqishi uchun */
     .menu ul {
-        display: none; /* Mobil qurilmalarda menyu boshida yashirilgan bo'ladi */
+        display: none; /* Yashirilgan menyu */
         list-style: none;
         padding: 0;
         margin: 0;
         position: absolute;
         top: 100%;
-        right: 0; /* Menyu o'ngdan boshlanadi */
+        right: 0;
         background-color: #fff;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
 
+    /* Menyu elementlari */
     .menu ul li {
         padding: 12px;
         text-align: left;
@@ -58,25 +57,25 @@ text-align:justify;
         display: block;
     }
 
-    /* Menu icon */
-    .menu-icon {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
-        color: #333;
-    }
-
-    .menu-icon:hover {
-        color: #007bff;
-    }
-}
-
-/* Mobil qurilmada menuni ko'rsatish uchun icon bosilganda */
-@media (max-width: 480px) {
+    /* Mobil qurilma uchun menyuni ko'rsatish */
     .menu.active ul {
         display: block; /* Menyuni faollashtirish */
     }
 }
+
+/* 1024px va undan katta ekranlar uchun menyu har doim ko'rinadi */
+@media (min-width: 1025px) {
+    .menu ul {
+        display: flex; /* Desktopda menyu doim ko'rinadi */
+        position: relative;
+        box-shadow: none;
+    }
+
+    .menu-icon {
+        display: none; /* Desktopda icon yashiriladi */
+    }
+}
+
 
 .image{
 border:#03F;
