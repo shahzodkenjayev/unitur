@@ -12,87 +12,6 @@
 	text-shadow:1px 1px 2px black;;
 	text-align:center;
 }
-
-
-/* Umumiy uslublar (Mobil qurilmalar uchun ishlatiladigan o'lchamlar) */
-
-
-/* 468px va undan kichik ekranlar uchun */
-@media (max-width: 468px) {
-    .fixed div.fixed-header {
-        width: 96%; /* Menyu va headerni biroz kichraytirish */
-        margin: 0 auto; /* Markazlashtirish */
-    }
-
-    .logo img {
-        width: 80%; /* Logotipni kichraytirish */
-        display: block; /* Logotipni markazga joylashtirish */
-        margin: 0 auto; /* Logotipni markazlashtirish */
-    }
-
-    .top-nav ul {
-        padding: 0; /* Menyudagi paddingni o'chirish */
-    }
-
-    .top-nav ul li {
-        margin: 10px 0; /* Menyu elementlari orasidagi bo'shliq */
-    }
-
-    .menu ul li a {
-        font-size: 14px; /* Mobil qurilmalar uchun menyu elementlari o'lchami */
-    }
-}
-
-/* 640px va undan kichik ekranlar uchun */
-@media (max-width: 640px) {
-    .top-nav ul li a {
-        padding: 0.4em 1em; /* Menyu elementlarining joylashuvini va o'lchamini yaxshilash */
-        font-size: 0.9em; /* Menyu shriftini biroz kichraytirish */
-    }
-}
-
-/* 480px va undan kichik ekranlar uchun */
-@media (max-width: 480px) {
-    .logo img {
-        width: 60%; /* Logotipni kichraytirish */
-        margin-left: 20%; /* Logotipni markazlashtirish */
-    }
-
-    .menu ul li {
-        text-align: center; /* Menyu elementlarini markazga joylashtirish */
-    }
-}
-
-/* 320px va undan kichik ekranlar uchun */
-@media (max-width: 320px) {
-    .logo img {
-        width: 50%; /* Logotipni yanada kichraytirish */
-        margin-left: 25%; /* Logotipni markazlashtirish */
-    }
-
-    .top-nav ul {
-        padding-left: 10px; /* Menyu tarkibini o'zgartirish */
-    }
-
-    .menu ul li a {
-        font-size: 0.8em; /* Menyu shriftini yanada kichraytirish */
-        padding: 0.3em 0.8em; /* Menyu elementlarining joylashuvini moslashtirish */
-    }
-}
-
-/* 600px ekran va kichikroq uchun maxsus uslub */
-@media screen and (max-width: 600px) {
-    h1 {
-        font: 24px/50px "Helvetica Neue", Helvetica, Arial, sans-serif; /* H1 uchun shrift o'lchamini va chiziqlar oralig'ini sozlash */
-    }
-
-    .callbacks_nav {
-        top: 47%; /* Nav elementlarini markazlashtirish */
-    }
-}
-
-
-
 .paraText{
 line-height:25px;
 padding:10px;
@@ -350,6 +269,14 @@ border:1px solid #0056b3;
 }
 .callbacks_tabs li{
 	display:inline-block;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font: 24px/50px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  .callbacks_nav {
+    top: 47%;
+    }
 }
 /*----*/
 .callbacks_tabs a{
@@ -1109,6 +1036,10 @@ text-decoration:none;
 .copyright a:hover{
 color:#70B8E8;
 }
+@media(max-width:1024px){
+.fixed div.fixed-header {
+width: 93%;
+}
 .header-info h1 {
 font-size: 1.5em;
 }
@@ -1223,6 +1154,10 @@ width: 39px;
 margin-top: 2.5em;
 }
 }
+@media(max-width:768px){
+.fixed div.fixed-header {
+width: 96%;
+}
 .header-top,.fixed{
 padding: 1em 0;
 }
@@ -1332,6 +1267,11 @@ margin-top:1em;
 float: none;
 }
 }
+@media(max-width:640px){
+.top-nav ul li a {
+padding: 0.4em 0.9em;
+font-size: 0.9em;
+}
 .fixed div.fixed-header {
 width: 95.3%;
 }
@@ -1376,6 +1316,11 @@ margin-left: 0.5em;
 margin-top: 1em;
 font-size: 1em;
 }
+}
+@media(max-width:480px){
+.logo img {
+width: 70%;
+margin-left:100%;
 }
 .header-top, .fixed {
 padding: 0.5em 0;
@@ -1476,6 +1421,11 @@ margin-top: 1em;
 .fotter-right form input[type="submit"] {
 padding: 0 4em 0 2em;
 }
+}
+@media(max-width:320px){
+.logo img {
+width: 64%;
+margin-left: 59%;
 }
 .fixed div.fixed-header {
 width: 90%;
