@@ -24,36 +24,21 @@
         <div style="width:30%; padding:10px;">
             <h3 style="font-family:Lucida Calligraphy; font-size:20px; color:#09F;">Kategoriyalar</h3>
             <?php
-            // MySQL ulanish
-            $cn = mysqli_connect("localhost", "root", "profi117", "travel");
+function makeconnection() {
+    $host = 'localhost';
+    $username = 'root';
+    $password = 'profi117'; // Bu yerda yangi parolni yozing
+    $database = 'travel'; // Ma'lumotlar bazasining nomi
 
-            if (!$cn) {
-                die("Ulanishda xato: " . mysqli_connect_error());
-            }
+    $cn = mysqli_connect($host, $username, $password, $database);
 
-            // Kategoriyalarni olish ddd
-            $s = "SELECT * FROM category";
-            $result = mysqli_query($cn, $s);
+    if (!$cn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
 
-            if ($result) {
-                if (mysqli_num_rows($result) > 0) {
-                    echo "<table border='1' style='border-collapse:collapse; width:100%;'>";
-                    while ($data = mysqli_fetch_assoc($result)) {
-                        echo "<tr><td style='padding:10px;'><b><a href='subcat.php?catid={$data['Cat_id']}'>" . 
-                        htmlspecialchars($data['Cat_name']) . 
-                        "</a></b></td></tr>";
-                    }
-                    echo "</table>";
-                } else {
-                    echo "<p>Kategoriyalar mavjud emas.</p>";
-                }
-            } else {
-                echo "<p>MySQL so'rov xato: " . mysqli_error($cn) . "</p>";
-            }
-
-            // Ulanishni yopish
-            mysqli_close($cn);
-            ?>
+    return $cn;
+}
+?>
         </div>
 
         <!-- UNITUR ma'lumotlari -->
