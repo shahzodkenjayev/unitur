@@ -81,9 +81,6 @@ font-weight:400;
 .top-nav ul li.active a,.top-nav ul li a:hover,#nav .current a{
 border:1px solid #0056b3;
 }
-#nav li a[href="category.php"]:hover {
-    border: 1px solid #0056b3; /* Kategoriyalar tugmasi ustiga sichqoncha kelsa chegara ko'rsatiladi */
-}
 .fixed{
 	position: fixed;
 	top: 0;
@@ -272,6 +269,14 @@ border:1px solid #0056b3;
 }
 .callbacks_tabs li{
 	display:inline-block;
+}
+@media screen and (max-width: 600px) {
+  h1 {
+    font: 24px/50px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+  .callbacks_nav {
+    top: 47%;
+    }
 }
 /*----*/
 .callbacks_tabs a{
@@ -680,36 +685,30 @@ h6.b-animate.b-from-left.b-delay03
 	top: 0;
 	width: 95.3%;
 	position: absolute;
-	background: rgba(101, 178,.guide-caption {
-    opacity: 0;
-    visibility: hidden;
-    position: absolute;
-    top: 0;
-    width: 95.3%;
-    background: rgba(101, 178, 229, 0.93);
-    height: 86%;
-    text-align: center;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
+	background: rgba(101, 178, 229, 0.93);
+	height: 86%;
+	text-align: center;
 }
-
-.guide-caption span {
-    background: url('../images/guide-icons2.png') no-repeat center center;
-    background-size: cover; /* Nisbatlarni saqlash */
-    display: block;
-    margin: 0 0.5em;
-    width: 57%;
-    height: 52px;
-    text-align: center;
-    position: absolute;
-    top: 42%;
-    right: 18%;
+.guide-caption span{
+	background:url('../images/guide-icons2.png') no-repeat 0px 0px;
+	display:inline-block;
+	margin: 0 0.5em;
+	width:57%;
+	height: 52px;
+	display: block;
+	text-align: center;
+	position: absolute;
+	top: 42%;
+	right: 18%;
+	background-size: 100%;
 }
-
-.image-grid:hover div.guide-caption {
-    opacity: 1;
-    visibility: visible;
+.image-grid:hover div.guide-caption{
+	display: block;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
 }
-
 .tour-guides {
 padding-top:6%;
 margin-bottom: 10%;
@@ -992,41 +991,41 @@ border:none;
 outline:none;
 margin-top: 2em;
 }
-
-.social-icons {
-    margin-top: 3.5em;
-    float: right;
+.social-icons{
+margin-top:3.5em;
 }
-.social-icons a span {
-    width: 44px;
-    height: 39px; /* Bo'shliq olib tashlandi */
-    background: url('../images/social-icons.png') no-repeat 0px 0px;
-    display: inline-block;
-    margin: 0 0.5em;
+.social-icons a span{
+	width:44px;
+	height:39px;
+	background:url('../images/social-icons.png') no-repeat 0px 0px;
+	display:inline-block;
+	margin: 0 0.5em;
 }
-.social-icons a span.facebook {
-    background-position: 0px 0px;
+.social-icons a span.facebook{
+	background-position: 0px 0px;
 }
-.social-icons a span.twitter {
-    background-position: -63px 0px;
+.social-icons a span.twitter{
+		background-position:-63px 0px;
 }
-.social-icons a span.googleplus {
-    background-position: -127px 0px;
+.social-icons a span.googleplus{
+		background-position:-127px 0px;
 }
-.social-icons a span.pinterest {
-    background-position: -190px 0px;
+.social-icons a span.pinterest{
+		background-position: -190px 0px;
 }
-.social-icons a span.instagram {
-    background-position: -254px 0px;
+.social-icons a span.instagram{
+		background-position:-254px 0px
 }
-.social-icons a span:hover {
-    opacity: 0.4;
+.social-icons a span:hover{
+	opacity:0.4;
 }
-.copyright {
-    background: #F1F2F2;
-    min-height: 48px;
+.social-icons{
+float:right;
 }
-
+.copyright{
+background:#F1F2F2;
+min-height:48px;
+}
 .copyright p{
 color:#9D9C9C;
 padding:1em 0;
@@ -1036,6 +1035,10 @@ text-decoration:none;
 }
 .copyright a:hover{
 color:#70B8E8;
+}
+@media(max-width:1024px){
+.fixed div.fixed-header {
+width: 93%;
 }
 .header-info h1 {
 font-size: 1.5em;
@@ -1151,13 +1154,16 @@ width: 39px;
 margin-top: 2.5em;
 }
 }
-
+@media(max-width:768px){
+.fixed div.fixed-header {
+width: 96%;
+}
 .header-top,.fixed{
 padding: 1em 0;
 }
 .top-nav ul li a {
 padding: 0.4em 1em;
-font-size: 0.4em;
+font-size: 1em;
 }
 .callbacks .caption {
 top: 46%;
@@ -1261,6 +1267,11 @@ margin-top:1em;
 float: none;
 }
 }
+@media(max-width:640px){
+.top-nav ul li a {
+padding: 0.4em 0.9em;
+font-size: 0.9em;
+}
 .fixed div.fixed-header {
 width: 95.3%;
 }
@@ -1305,6 +1316,11 @@ margin-left: 0.5em;
 margin-top: 1em;
 font-size: 1em;
 }
+}
+@media(max-width:480px){
+.logo img {
+width: 70%;
+margin-left:100%;
 }
 .header-top, .fixed {
 padding: 0.5em 0;
@@ -1406,6 +1422,11 @@ margin-top: 1em;
 padding: 0 4em 0 2em;
 }
 }
+@media(max-width:320px){
+.logo img {
+width: 64%;
+margin-left: 59%;
+}
 .fixed div.fixed-header {
 width: 90%;
 }
@@ -1421,7 +1442,7 @@ border:none;
 }
 .top-nav ul {
 float: right;
-margin: 0.3em 0.2em 0 0;
+margin: 0.3em 1.2em 0 0;
 }
 .top-nav ul li {
 display: inline-block;
@@ -1601,61 +1622,3 @@ margin: 1em 0 0 0;
 width: 38px;
 }
 }
-.custom-button {
-    background-color: #007BFF !important; /* Ko'k rang */
-    color: #fff !important; /* Oq matn */
-    font-size: 18px !important; /* Matn kattaligi */
-    font-weight: bold !important; /* Matnni qalin qilish */
-    border: none !important; /* Tashqi chiziqni olib tashlash */
-    border-radius: 50px !important; /* Oval shakl uchun radius */
-    padding: 10px 30px !important; /* Tugma ichidagi matn joylashuvi */
-    cursor: pointer !important; /* Ko'rsatkichni o'zgartirish */
-    transition: background-color 0.3s ease, transform 0.2s ease !important; /* Animatsiya */
-}
-
-.custom-button:hover {
-    background-color: #0056b3 !important; /* Hover holati uchun quyuqroq ko'k */
-}
-
-.custom-button:active {
-    transform: scale(0.98) !important; /* Bosilganda kichikroq effekt */
-}
-
-/* Mobil qurilmalar uchun moslashuv */
-@media (max-width: 768px) {
-    .top-nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .logo {
-        margin-bottom: 10px;
-    }
-    .menu {
-        display: none; /* Menyu standart ko'rinishda yashirin bo'ladi */
-    }
-    .menu ul {
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-        margin: 0;
-    }
-    .menu ul li {
-        list-style: none;
-        margin: 10px 0;
-    }
-    .menu ul li a {
-        text-decoration: none;
-        color: #333;
-        font-size: 16px;
-    }
-    .menu-toggle {
-        display: block;
-        cursor: pointer;
-        background-color: #333;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-    }
-}
-
