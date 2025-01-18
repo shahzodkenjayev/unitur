@@ -18,9 +18,8 @@ padding:10px;
 text-align:justify;
 }
 
-
-/* 1024px va undan kichik ekranlar uchun */
-@media (max-width: 1024px) {
+/* 480px va undan kichik ekranlar uchun */
+@media (max-width: 480px) {
     .top-nav {
         display: flex;
         justify-content: space-between;
@@ -43,8 +42,7 @@ text-align:justify;
         margin: 0;
         position: absolute;
         top: 100%;
-        left: 0;
-        right: 0;
+        right: 0; /* Menyu o'ngdan boshlanadi */
         background-color: #fff;
         box-shadow: 0 8px 16px rgba(0,0,0,0.2);
     }
@@ -74,12 +72,11 @@ text-align:justify;
 }
 
 /* Mobil qurilmada menuni ko'rsatish uchun icon bosilganda */
-@media (max-width: 1024px) {
+@media (max-width: 480px) {
     .menu.active ul {
         display: block; /* Menyuni faollashtirish */
     }
 }
-
 
 .image{
 border:#03F;
