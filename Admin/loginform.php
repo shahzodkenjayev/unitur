@@ -76,10 +76,10 @@ if(isset($_POST["sbmt"])) {
 <div class="col-sm-9">
 
 <form method="post">
-<table border="0" width="120px" height="35px" align="left" class="tableshadow">
-<tr><td colspan="2" class="toptd"><img src="adminpics/lo.jpg" width="120px" height="35px" /></td></tr>
+<table border="0" width="500px" height="400px" align="left" class="tableshadow">
+<tr><td colspan="2" class="toptd"><img src="adminpics/lo.jpg" width="550px" height="100px" /></td></tr>
 
-<tr><td><img src="adminpics/gggh.jpg" width="20px" height="20px" /></td>
+<tr><td><img src="adminpics/gggh.jpg" width="200px" height="200px" /></td>
 <td class="lefttxt"><table border="0" width="100px" height="200px"><td>User Name</td></td><td><input type="text" name="t1" required pattern="[a-zA-z _]{1,50}" title="Please Enter Only Characters between 1 to 50 for User Name" /></td></tr>
 <tr><td class="lefttxt">Password&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td><input type="password" name="t2" required pattern="[a-zA-z0-9]{1,10}" title="Please Enter Only Characters between 1 to 10 for Password" /></td></tr></table>
 <tr><td></td><td align="center" ><input type="submit" value="LOGIN" name="sbmt" /></td></tr>
