@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>https://unitur.uz/</loc>  <!-- Saytning bosh sahifasi URL -->
+      <lastmod>2025-01-18</lastmod>  <!-- Sahifaning oxirgi yangilanish sanasi -->
+      <changefreq>daily</changefreq>  <!-- Sayta qachon yangilanishi haqida taxminiy ma'lumot (daily, weekly, monthly, va boshqalar) -->
+      <priority>1.0</priority>  <!-- Sahifaning ahamiyati (0.0 - 1.0 orasida) -->
+   </url>
+   <url>
+      <loc>https://unitur.uz/about</loc>
+      <lastmod>2025-01-18</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>0.8</priority>
+   </url>
+   <!-- boshqa sahifalar uchun shu tarzda davom etadi -->
+</urlset>
