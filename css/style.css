@@ -25,11 +25,33 @@ text-align:justify;
 
 /* Mobil qurilma uchun icon ko'rsatish */
 @media (max-width: 1024px) {
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Logotipni va iconni o'ngdan joylashtirish */
+    .logo {
+        order: 1; /* Logotipni eng yuqoriga olib kelish */
+    }
+
+    .menu {
+        order: 2; /* Menyuni logotipdan keyin joylashtirish */
+        position: relative;
+    }
+
+    /* Menu icon */
     .menu-icon {
-        display: block; /* Icon faqat mobil qurilmada ko'rinadi */
+        display: block;
         font-size: 30px;
         cursor: pointer;
         color: #333;
+        margin-left: auto; /* Menu iconini o'ngga surish */
+    }
+
+    .menu-icon:hover {
+        color: #007bff;
     }
 
     /* Menu o'ngdan chiqishi uchun */
