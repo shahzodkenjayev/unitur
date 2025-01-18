@@ -7,7 +7,7 @@ error_reporting(E_ALL);
 function makeconnection() {
     $server = "localhost";  // MySQL serveri
     $username = "root";     // MySQL foydalanuvchi nomi
-    $password = "";         // MySQL paroli
+    $password = "profi117";         // MySQL paroli
     $dbname = "travel";     // Ma'lumotlar bazasi nomi
 
     // MySQLga ulanish
