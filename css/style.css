@@ -16,16 +16,9 @@
 
 /* Umumiy uslublar (Mobil qurilmalar uchun ishlatiladigan o'lchamlar) */
 
-/* 1024px va undan kichik ekranlar uchun */
-@media (max-width: 1024px) {
-    .fixed div.fixed-header {
-        width: 93%;
-        margin: 0 auto; /* Markazlashgan holat */
-    }
-}
 
-/* 768px va undan kichik ekranlar uchun */
-@media (max-width: 768px) {
+/* 468px va undan kichik ekranlar uchun */
+@media (max-width: 468px) {
     .fixed div.fixed-header {
         width: 96%; /* Menyu va headerni biroz kichraytirish */
         margin: 0 auto; /* Markazlashtirish */
