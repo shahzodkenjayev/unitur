@@ -1,6 +1,6 @@
 
 <div class="copyright text-right">
-<p style="padding-right:100px">Designed by: Manpreet Kaur</p>
+<p style="padding-right:100px">UNITUR.UZ</p>
 </div>
   <script src="js/jquery.scrollTo.js"></script>
 	<script src="js/jquery.nav.js"></script>
