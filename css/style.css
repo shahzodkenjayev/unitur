@@ -15,7 +15,7 @@
 
 @media (max-width: 768px) {
     .top-nav {
-        text-align: center;
+        text-align: left;
     }
 
     .logo img {
