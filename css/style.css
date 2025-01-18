@@ -16,8 +16,71 @@
 line-height:25px;
 padding:10px;
 text-align:justify;
-
 }
+
+
+/* 1024px va undan kichik ekranlar uchun */
+@media (max-width: 1024px) {
+    .top-nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .logo {
+        order: 1; /* Logotipni eng yuqoriga olib kelish */
+    }
+    
+    .menu {
+        order: 2; /* Menyuni logotipdan keyin joylashtirish */
+        position: relative;
+    }
+
+    .menu ul {
+        display: none; /* Mobil qurilmalarda menyu boshida yashirilgan bo'ladi */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+
+    .menu ul li {
+        padding: 12px;
+        text-align: left;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #333;
+        display: block;
+    }
+
+    /* Menu icon */
+    .menu-icon {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .menu-icon:hover {
+        color: #007bff;
+    }
+}
+
+/* Mobil qurilmada menuni ko'rsatish uchun icon bosilganda */
+@media (max-width: 1024px) {
+    .menu.active ul {
+        display: block; /* Menyuni faollashtirish */
+    }
+}
+
+
 .image{
 border:#03F;
 border:thick:#9C0;
