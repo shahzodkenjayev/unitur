@@ -1,17 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!DOCTYPE html>
+<html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>My-tour bootstrap Design website | Home :: w3layouts</title>
+<title>SAYOHAT | UNITUR </title>
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
-<link href="stylecss.css" rel='stylesheet' type='text/css'/>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link rel="icon" type="image/png" href="favicon.png">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!--js--> 
+<script src="https://cdn.rawgit.com/viljamis/ResponsiveSlides.js/master/responsiveslides.min.js"></script>
 <script src="js/jquery.min.js"></script>
-
 <!--/js-->
 <!--animated-css-->
 <link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
@@ -19,9 +20,31 @@
 <script>
  new WOW().init();
 </script>
-</head>
+<!--/animated-css-->head>
 
 <body>
+	<div class="header-top">
+    <!--container-->
+    <div class="container">
+        <div class="top-nav">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" id="section-1" width="120" height="25" class="img-responsive" alt="UNITUR"/></a>
+            </div>
+            <div class="menu">
+                <ul id="nav">
+                    <li><a href="#section-1">Bosh sahifa</a></li>
+                    <li><a href="#section-2">Biz haqimizda</a></li>
+                    <li><a href="#section-3">Eng mashhur sayohatlar</a></li>
+                    <li><a href="category.php">Kategoriyalar</a></li>
+                    <li><a href="#section-4">Reklamalar</a></li>
+                    <li><a href="#section-5">Aloqa</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!--/container-->
+</div>
 <?php include('function.php'); ?>
 <?php include('top.php'); ?>
 <!--/sticky-->
