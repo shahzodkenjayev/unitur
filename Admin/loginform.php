@@ -76,7 +76,7 @@ $data=mysqli_fetch_array($q);
 
 <form method="post">
 <table border="0" width="500px" height="400px" align="left" class="tableshadow">
-<tr><td colspan="2" class="toptd"><img src="adminpics/lo.jpg" width="550px" height="100px" /></td></tr>
+<tr><td colspan="2" class="toptd"><img src="adminpics/lo.jpg" width="120px" height="35px" /></td></tr>
 
 <tr><td><img src="adminpics/gggh.jpg" width="200px" height="200px" /></td>
 <td class="lefttxt"><table border="0" width="100px" height="200px"><td>User Name</td></td><td><input type="text" name="t1" required pattern="[a-zA-z _]{1,50}" title"Please Enter Only Characters between 1 to 50 for User Name" /></td></tr>
