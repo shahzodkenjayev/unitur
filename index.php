@@ -3,6 +3,7 @@
 <html>
 <head>
 <title></title>
+<link rel="icon" href="favicon.png" type="image/x-icon">
 <link href="css/owl.carousel.css" rel='stylesheet' type='text/css'/>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
