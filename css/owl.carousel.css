@@ -1,47 +1,48 @@
-/*
-* 	Owl Carousel Owl Demo Theme 
-*	v1.24
-*/
-    #owl-demo .item,#owl-demo1 .item{
-        margin: 3px;
-    }
-    #owl-demo .item img{
-        display: block;
-        height: auto;
-    }
+/* Owl carouselning asosiy styling qismiga qo'shish */
 
-.owl-theme .owl-controls{
-	margin-top: 10px;
-	text-align: center;
+/* Carousel itemlarining marginlarini sozlash */
+#owl-demo .item, #owl-demo1 .item {
+    margin: 3px;
 }
 
-/* Styling Next and Prev buttons */
+/* Carousel itemlaridagi rasmlarni moslashtirish */
+#owl-demo .item img {
+    display: block;
+    height: auto;
+}
 
-.owl-theme .owl-controls .owl-buttons div{
-	color: #FFF;
-	display: inline-block;
-	zoom: 1;
-	margin: 5px;
-	padding: 3px 10px;
-	font-size: 12px;
-	width: 33px;
-	height: 54px;
+/* Navigation buttonlarining ko'rinishi */
+.owl-theme .owl-controls {
+    margin-top: 10px;
+    text-align: center;
 }
-.owl-next{
-	background: url(../images/divice-pagenations.png) no-repeat -35px 0px;
-	position: absolute;
-	right: 45%;
-	top: -57%;
-}
-.owl-prev{
-	background: url(../images/divice-pagenations.png) no-repeat 1px 0px;
-	position: absolute;
-	right: 53%;
-	top: -57%;
-}
-/* Clickable class fix problem with hover on touch devices */
-/* Use it for non-touch hover action */
 
+/* Next va Prev tugmalari uchun style */
+.owl-theme .owl-controls .owl-buttons div {
+    color: #FFF;
+    display: inline-block;
+    zoom: 1;
+    margin: 5px;
+    padding: 3px 10px;
+    font-size: 12px;
+    width: 33px;
+    height: 54px;
+}
+
+/* Keyingi va oldingi tugmalar tasvirlari */
+.owl-next {
+    background: url(../images/divice-pagenations.png) no-repeat -35px 0px;
+    position: absolute;
+    right: 45%;
+    top: -57%;
+}
+
+.owl-prev {
+    background: url(../images/divice-pagenations.png) no-repeat 1px 0px;
+    position: absolute;
+    right: 53%;
+    top: -57%;
+}
 
 /* Styling Pagination*/
 
