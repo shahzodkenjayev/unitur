@@ -27,7 +27,7 @@
                 <a href="#"><img src="images/logo.png" id="section-1" width="120" height="25" class="img-responsive" alt="UNITUR"/></a>
             </div>
             <div class="menu">
-		    <span class="menu-icon" onclick="toggleMenu()">&#9776;</span
+		   
                 <ul id="nav">
                     <li><a href="#section-1">Bosh sahifa</a></li>
                     <li><a href="#section-2">Biz haqimizda</a></li>
