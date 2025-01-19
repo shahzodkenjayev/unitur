@@ -46,12 +46,12 @@
 <?php include('top.php'); ?>
 <!--/sticky-->
 //<?php include('slider.php'); ?>
-<div style="height:50px"></div>
-<div style="width:1000px; margin:auto" >
+//<div style="height:50px"></div>
+//<div style="width:1000px; margin:auto" >
 
-<div style="width:200px; float:left">
+//<div style="width:200px; float:left">
 
-<table cellpadding="0" cellspacing="0" width="1000px">
+//<table cellpadding="0" cellspacing="0" width="1000px">
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Sayohatlar ro'yxati</b></td></tr>
 
 
