@@ -1,3 +1,17 @@
+<?php include('function.php'); 
+
+// SQL so'rovi orqali kategoriya ma'lumotlarini olish
+$s = "SELECT * FROM category";
+$result = mysqli_query($cn, $s);
+
+// Agar so'rovda xatolik yuz bersa, xatoni ko'rsatish
+if (!$result) {
+    echo "Xatolik yuz berdi: " . mysqli_error($cn);
+    exit();
+}
+
+?>
+
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>UNITUR | Bosh sahifa </title>
@@ -53,13 +67,6 @@
 
 <table cellpadding="0" cellspacing="0" width="1000px">
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Category</b></td></tr>
-
-	$cn = mysqli_connect("localhost", "root", "profi117", "travel");
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-} else {
-    echo "Ma'lumotlar bazasiga muvaffaqiyatli ulanish";
-}
 
 
 <?php
