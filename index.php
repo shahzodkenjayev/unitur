@@ -178,7 +178,7 @@ Bizning sayohat mutaxassislarimiz hoziroq bron qilishga yordam bera olishadi!</h
                     <h4 style="color:#09F">UNITUR.UZ</h4>
                     <p style="color:#000">TUR paketini tuzishga yordam kerakmi?<br/>
                     Ajoyib tavsiyalar uchun siz bizning sayohat mutaxassisimiz bilan ham bog'lanishingiz mumkin</p>
-                    <h5 style="color:#000"><span class="img1"></span>(+998) 787771111&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;(+998) 787771111</h5>
+                    <h5 style="color:#000"><span class="img1"></span>(+998) 78-777-11-11&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;(+998) 78-777-11-11</h5>
                     <h5 style="color:#000"><span class="img2"></span><a href="#">unitur.uz&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;info@unitur.uz</a></h5>
                     <h5 style="color:#000"><span class="img3"></span>Toshkent sh., Bektemir t., Husayn Boyqaro k., 117.</h5>
                     <br/>
@@ -202,7 +202,7 @@ mysqli_query($cn, $s);
                     <form method="post">
                     <table border="0" width="700px" height="500px">
                         <tr><td align="left"> <input type="text" class="text" value="Ismingiz"  name="t1" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Ismingizni kiriting';}" required pattern="[a-zA-z1 _]{1,50}" title="Iltimos, faqat harflar va raqamlarni 1 dan 50 gacha kiriting"></td></tr>
-                        <tr><td align="left"><input type="text" class="text" value="Aloqa raqamingiz" name="t2" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Aloqa raqamingizni kiriting';}" required pattern="[0-9]{10,12}" title="Iltimos, faqat 10 dan 12 gacha bo'lgan raqamlarni kiriting"></td></tr>
+                        <tr><td align="left"><input type="text" class="text" value="Aloqa raqamingiz" name="t2" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Aloqa raqamingizni kiriting';}" required pattern="[0-9]{10,12}" title="Iltimos, telefon raqamingizni xalqaro formatda kiriting"></td></tr>
                         <tr><td align="left"> <input type="text" class="text" value="Email" name="t3" onFocus="this.value = '';" onBlur="if (this.value == '') {this.value = 'Emailingizni kiriting';}" required></td></tr>
                         <tr><td><textarea onFocus="if(this.value == 'Xabar') this.value='';" name="t4" onBlur="if(this.value == '') this.value='Bu yerda xabar kiriting';" required/>Xabar</textarea></td></tr>
                         <tr><td><input type="submit" value="Xabar yuborish" name="sbmt"></td></tr>
