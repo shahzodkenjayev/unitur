@@ -1003,41 +1003,41 @@ top: 42%;
 left: 50.5%;
 bottom:0;
 }
-.fotter{
+.footer{
 background:#70B8E8;
 min-height:300px;
 }
-.fotter-grids {
+.footer-grids {
 padding: 4em 0;
 }
-.fotter-left img {
+.footer-left img {
 margin-top: 1em;
 }
-.fotter-left p{
+.footer-left p{
 color:#fff;
 margin:1em 0;
 line-height: 22px;
 width: 80%;
 }
-.fotter-middle h3 {
+.footer-middle h3 {
 color: #fff;
 font-size: 1.3em;
 }
-.fotter-middle ul{
+.footer-middle ul{
 margin-top:1em;
 }
-.fotter-middle ul li{
+.footer-middle ul li{
 	list-style-type:none;
 	margin-bottom: 1em;
 }
-.fotter-middle ul li a{
+.footer-middle ul li a{
 	text-decoration:none;
 	color: #fff;
 }
-.fotter-middle ul li a:hover{
+.footer-middle ul li a:hover{
 	color:#2690D6;
 }
-.fotter-middle ul li a span{
+.footer-middle ul li a span{
 	background:url(../images/arow.png) no-repeat;
 	width:10px;
 	height:10px;
@@ -1045,12 +1045,12 @@ margin-top:1em;
 	vertical-align:middle;
 	margin-right: 5px
 }
-.fotter-right h3 {
+.footer-right h3 {
 color: #fff;
 font-size: 1.3em;
 margin-left: 1em;
 }
-.fotter-right form input[type="text"]{
+.footer-right form input[type="text"]{
 	background:transparent;
 	color:#fff;
 	border:1px solid #fff;
@@ -1060,7 +1060,7 @@ margin-left: 1em;
 	margin:1.5em 0 0 1.5em;
 	
 }
-.fotter-right form input[type="submit"]{
+.footer-right form input[type="submit"]{
 color:#fff;
 background: url("../images/submit2.png") no-repeat 0 0;
 width: 18px;
@@ -1225,7 +1225,7 @@ width: 45.8%;
 .contact textarea {
 width:99%;
 }
-.fotter-middle ul li a span {
+.footer-middle ul li a span {
 margin-right: 3px;
 }
 .social-icons a span {
@@ -1320,27 +1320,27 @@ left: 19%;
 width: 100%;
 margin: 3% 0 0 0%;
 }
-.fotter-left,.fotter-right{
+.footer-left,.footer-right{
 text-align:center;
 }
-.fotter-middle{
+.footer-middle{
 margin-left:32%;
 }
-.fotter-middle h3 {
+.footer-middle h3 {
 margin:8% 0 0 15%;
 }
-.fotter-left p {
+.footer-left p {
 width: 66%;
 margin: 0 auto;
 padding-top: 1em;
 }
-.fotter-right h3 {
+.footer-right h3 {
 padding:1em 0 0 1em;
 }
-.fotter-right form input[type="text"] {
+.footer-right form input[type="text"] {
 width: 77%;
 }
-.fotter-right form input[type="submit"] {
+.footer-right form input[type="submit"] {
 padding:0 8em 0 2em;
 }
 .social-icons {
@@ -1484,25 +1484,25 @@ padding-top: 18%;
 .contact form input[type="text"] {
 width: 44.8%;
 }
-.fotter-grids {
+.footer-grids {
 padding: 2em 0;
 }
-.fotter-middle {
+.footer-middle {
 margin-left: 14%;
 }
-.fotter-middle h3 {
+.footer-middle h3 {
 margin: 8% 0 0 21%;
 }
-.fotter-right h3 {
+.footer-right h3 {
 padding: 1em 2em 0 0em;
 }
-.fotter-right form input[type="text"] {
+.footer-right form input[type="text"] {
 width: 85%;
 }
-.fotter-right form input[type="submit"] {
+.footer-right form input[type="submit"] {
 margin-top: 1em;
 }
-.fotter-right form input[type="submit"] {
+.footer-right form input[type="submit"] {
 padding: 0 4em 0 2em;
 }
 }
@@ -1671,7 +1671,7 @@ padding:0;
 .contact textarea {
 margin-top: 1em;
 }
-.fotter-left p {
+.footer-left p {
 padding-top: 0.5em;
 overflow: hidden;
 height: 56px;
@@ -1686,19 +1686,19 @@ width: 100%;
 .map{
 display:none;
 }
-.fotter-left,.fotter-middle,.fotter-right {
+.footer-left,.footer-middle,.footer-right {
 padding: 0;
 }
-.fotter-middle {
+.footer-middle {
 margin-left: 0;
 }
-.fotter-middle h3 {
+.footer-middle h3 {
 margin: 8% 0 0 29%;
 }
-.fotter-right h3 {
+.footer-right h3 {
 margin-left:0;
 }
-.fotter-right form input[type="text"] {
+.footer-right form input[type="text"] {
 width: 100%;
 margin: 1em 0 0 0;
 }
