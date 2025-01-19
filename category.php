@@ -1,5 +1,3 @@
-
-
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>UNITUR | Bosh sahifa </title>
@@ -47,14 +45,14 @@
 <?php include('function.php'); ?>
 <?php include('top.php'); ?>
 <!--/sticky-->
-<?php include('slider.php'); ?>
+//<?php include('slider.php'); ?>
 <div style="height:50px"></div>
 <div style="width:1000px; margin:auto" >
 
 <div style="width:200px; float:left">
 
 <table cellpadding="0" cellspacing="0" width="1000px">
-<tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Category</b></td></tr>
+<tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Sayohatlar ro'yxati</b></td></tr>
 
 
 <?php
