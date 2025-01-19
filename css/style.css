@@ -1003,120 +1003,145 @@ top: 42%;
 left: 50.5%;
 bottom:0;
 }
-.footer{
-background:#70B8E8;
-min-height:300px;
+.footer {
+  background: #70B8E8;
+  min-height: 300px;
 }
+
 .footer-grids {
-padding: 4em 0;
+  padding: 4em 0;
 }
+
 .footer-left img {
-margin-top: 1em;
+  margin-top: 1em;
 }
-.footer-left p{
-color:#fff;
-margin:1em 0;
-line-height: 22px;
-width: 80%;
+
+.footer-left p {
+  color: #fff;
+  margin: 1em 0;
+  line-height: 22px;
+  width: 80%;
 }
+
 .footer-middle h3 {
-color: #fff;
-font-size: 1.3em;
+  color: #fff;
+  font-size: 1.3em;
 }
-.footer-middle ul{
-margin-top:1em;
+
+.footer-middle ul {
+  margin-top: 1em;
 }
-.footer-middle ul li{
-	list-style-type:none;
-	margin-bottom: 1em;
+
+.footer-middle ul li {
+  list-style-type: none;
+  margin-bottom: 1em;
 }
-.footer-middle ul li a{
-	text-decoration:none;
-	color: #fff;
+
+.footer-middle ul li a {
+  text-decoration: none;
+  color: #fff;
 }
-.footer-middle ul li a:hover{
-	color:#2690D6;
+
+.footer-middle ul li a:hover {
+  color: #2690D6;
 }
-.footer-middle ul li a span{
-	background:url(../images/arow.png) no-repeat;
-	width:10px;
-	height:10px;
-	display:inline-block;
-	vertical-align:middle;
-	margin-right: 5px
+
+.footer-middle ul li a span {
+  background: url(../images/arow.png) no-repeat;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
 }
+
 .footer-right h3 {
-color: #fff;
-font-size: 1.3em;
-margin-left: 1em;
+  color: #fff;
+  font-size: 1.3em;
+  margin-left: 1em;
 }
-.footer-right form input[type="text"]{
-	background:transparent;
-	color:#fff;
-	border:1px solid #fff;
-	outline:0;
-	padding:0.7em;
-	width:90%;
-	margin:1.5em 0 0 1.5em;
-	
+
+.footer-right form input[type="text"] {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+  outline: 0;
+  padding: 0.7em;
+  width: 90%;
+  margin: 1.5em 0 0 1.5em;
 }
-.footer-right form input[type="submit"]{
-color:#fff;
-background: url("../images/submit2.png") no-repeat 0 0;
-width: 18px;
-height: 17px;
-display: block;
-padding:0 3em 0 2em;
-float:right;
-border:none;
-outline:none;
-margin-top: 2em;
+
+.footer-right form input[type="submit"] {
+  color: #fff;
+  background: url("../images/submit2.png") no-repeat 0 0;
+  width: 18px;
+  height: 17px;
+  display: block;
+  padding: 0 3em 0 2em;
+  float: right;
+  border: none;
+  outline: none;
+  margin-top: 2em;
 }
-.social-icons{
-margin-top:3.5em;
+
+.social-icons {
+  margin-top: 3.5em;
 }
-.social-icons a span{
-	width:44px;
-	height:39px;
-	background:url('../images/social-icons.png') no-repeat 0px 0px;
-	display:inline-block;
-	margin: 0 0.5em;
+
+.social-icons a span {
+  width: 44px;
+  height: 39px;
+  background: url('../images/social-icons.png') no-repeat 0px 0px;
+  display: inline-block;
+  margin: 0 0.5em;
 }
-.social-icons a span.facebook{
-	background-position: 0px 0px;
+
+.social-icons a span.facebook {
+  background-position: 0px 0px;
 }
-.social-icons a span.twitter{
-		background-position:-63px 0px;
+
+.social-icons a span.twitter {
+  background-position: -63px 0px;
 }
-.social-icons a span.googleplus{
-		background-position:-127px 0px;
+
+.social-icons a span.googleplus {
+  background-position: -127px 0px;
 }
-.social-icons a span.pinterest{
-		background-position: -190px 0px;
+
+.social-icons a span.pinterest {
+  background-position: -190px 0px;
 }
-.social-icons a span.instagram{
-		background-position:-254px 0px
+
+.social-icons a span.instagram {
+  background-position: -254px 0px;
 }
-.social-icons a span:hover{
-	opacity:0.4;
+
+.social-icons a span:hover {
+  opacity: 0.4;
 }
-.social-icons{
-float:right;
+
+.social-icons {
+  float: right;
 }
-.copyright{
-background:#F1F2F2;
-min-height:48px;
+
+.copyright {
+  background: #F1F2F2;
+  min-height: 48px;
 }
-.copyright p{
-color:#9D9C9C;
-padding:1em 0;
+
+.copyright p {
+  color: #9D9C9C;
+  padding: 1em 0;
 }
-.copyright a{
-text-decoration:none;
+
+.copyright a {
+  text-decoration: none;
 }
-.copyright a:hover{
-color:#70B8E8;
+
+.copyright a:hover {
+  color: #70B8E8;
 }
+
 @media(max-width:1024px){
 .fixed div.fixed-header {
 width: 93%;
