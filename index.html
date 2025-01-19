@@ -133,21 +133,107 @@ function toggleMenu() {
 <!----- //isntagram---->
 
 <div class="video-container">
-  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DEoiu8HIGi3/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
-    <!-- Instagram video kodlari -->
-  </blockquote>
-  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DEoiu8HIGi3/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
-    <!-- Instagram video kodlari -->
-  </blockquote>
-  <!-- Boshqa videolarni qo'shish mumkin -->
-
-  <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DE4BSkvo4IJ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
-    <!-- Video -->
-  </blockquote>
-
-  <script async src="//www.instagram.com/embed.js"></script>
+  <div class="video-slider">
+    <div class="video-slide">
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DEoiu8HIGi3/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+        <!-- Instagram video kodlari -->
+      </blockquote>
+    </div>
+    <div class="video-slide">
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DEoiu8HIGi3/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+        <!-- Instagram video kodlari -->
+      </blockquote>
+    </div>
+    <div class="video-slide">
+      <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DE4BSkvo4IJ/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14">
+        <!-- Video -->
+      </blockquote>
+    </div>
+    <!-- Boshqa videolarni qo'shish mumkin -->
+  </div>
+  
+  <!-- Slaydlarni o'tkazish uchun tugmalar -->
+  <button class="prev">Prev</button>
+  <button class="next">Next</button>
 </div>
-		
+
+<script async src="//www.instagram.com/embed.js"></script>
+
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .video-slider {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+
+  .video-slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .instagram-media {
+    width: 100%;
+    height: auto;
+  }
+
+  .prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .prev {
+    left: 10px;
+  }
+
+  .next {
+    right: 10px;
+  }
+</style>
+
+		 <!-- jQuery kutubxonasini qo'shish -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Slayd boshqaruv JavaScript kodi -->
+  <script>
+    $(document).ready(function() {
+      let currentIndex = 0;
+      const slides = $(".video-slide");
+      const totalSlides = slides.length;
+
+      $(".next").click(function() {
+        if (currentIndex < totalSlides - 1) {
+          currentIndex++;
+        } else {
+          currentIndex = 0;
+        }
+        updateSlider();
+      });
+
+      $(".prev").click(function() {
+        if (currentIndex > 0) {
+          currentIndex--;
+        } else {
+          currentIndex = totalSlides - 1;
+        }
+        updateSlider();
+      });
+
+      function updateSlider() {
+        $(".video-slider").css("transform", "translateX(-" + (currentIndex * 100) + "%)");
+      }
+    });
+  </script>
 				
 <!---banner--->	
 	<div class="about section" id="section-2">
