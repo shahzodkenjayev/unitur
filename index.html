@@ -149,9 +149,8 @@ function toggleMenu() {
         <!-- Video -->
       </blockquote>
     </div>
-    <!-- Boshqa videolarni qo'shish mumkin -->
   </div>
-  
+
   <!-- Slaydlarni o'tkazish uchun tugmalar -->
   <button class="prev">Prev</button>
   <button class="next">Next</button>
@@ -162,9 +161,9 @@ function toggleMenu() {
 <style>
   .video-container {
     position: relative;
-  width: 100%;
-  height: 1200px; /* O'zingizga mos balandlikni belgilang */
-  overflow: hidden;
+    width: 100%;
+    height: 600px; /* Balandlikni o'zgartiring, kerakli o'lchamga moslang */
+    overflow: hidden;
   }
 
   .video-slider {
@@ -179,8 +178,8 @@ function toggleMenu() {
 
   .instagram-media {
     width: 100%;
-  height: 100%; /* Balandlikni to'liq belgilash */
-  object-fit: cover; /* Videolarni konteynerga to'liq moslashtiradi */
+    height: 100%;
+    object-fit: cover; /* Videolarni konteynerga to'liq moslashtiradi */
   }
 
   .prev, .next {
@@ -192,6 +191,7 @@ function toggleMenu() {
     border: none;
     padding: 10px;
     cursor: pointer;
+    z-index: 1;
   }
 
   .prev {
@@ -203,39 +203,40 @@ function toggleMenu() {
   }
 </style>
 
-		 <!-- jQuery kutubxonasini qo'shish -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  
-  <!-- Slayd boshqaruv JavaScript kodi -->
-  <script>
-    $(document).ready(function() {
-      let currentIndex = 0;
-      const slides = $(".video-slide");
-      const totalSlides = slides.length;
+<!-- jQuery kutubxonasini qo'shish -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-      $(".next").click(function() {
-        if (currentIndex < totalSlides - 1) {
-          currentIndex++;
-        } else {
-          currentIndex = 0;
-        }
-        updateSlider();
-      });
+<!-- Slayd boshqaruv JavaScript kodi -->
+<script>
+  $(document).ready(function() {
+    let currentIndex = 0;
+    const slides = $(".video-slide");
+    const totalSlides = slides.length;
 
-      $(".prev").click(function() {
-        if (currentIndex > 0) {
-          currentIndex--;
-        } else {
-          currentIndex = totalSlides - 1;
-        }
-        updateSlider();
-      });
-
-      function updateSlider() {
-        $(".video-slider").css("transform", "translateX(-" + (currentIndex * 100) + "%)");
+    $(".next").click(function() {
+      if (currentIndex < totalSlides - 1) {
+        currentIndex++;
+      } else {
+        currentIndex = 0;
       }
+      updateSlider();
     });
-  </script>
+
+    $(".prev").click(function() {
+      if (currentIndex > 0) {
+        currentIndex--;
+      } else {
+        currentIndex = totalSlides - 1;
+      }
+      updateSlider();
+    });
+
+    function updateSlider() {
+      $(".video-slider").css("transform", "translateX(-" + (currentIndex * 100) + "%)");
+    }
+  });
+</script>
+
 				
 <!---banner--->	
 	<div class="about section" id="section-2">
