@@ -1,6 +1,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>UNITUR | Bosh sahifa </title>
+<link rel="icon" href="favicon.png" type="image/x-icon">
 <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
 <link href="stylecss.css" rel='stylesheet' type='text/css'/>
 <link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
@@ -45,13 +46,13 @@
 <?php include('function.php'); ?>
 <?php include('top.php'); ?>
 <!--/sticky-->
-//<?php include('slider.php'); ?>
-//<div style="height:50px"></div>
-//<div style="width:1000px; margin:auto" >
+<?php include('slider.php'); ?>
+<div style="height:50px"></div>
+<div style="width:1000px; margin:auto" >
 
-//<div style="width:200px; float:left">
+<div style="width:200px; float:left">
 
-//<table cellpadding="0" cellspacing="0" width="1000px">
+<table cellpadding="0" cellspacing="0" width="1000px">
 <tr><td style="font-family:Lucida Calligraphy; font-size:20px; color:#09F"><b>Sayohatlar ro'yxati</b></td></tr>
 
 
