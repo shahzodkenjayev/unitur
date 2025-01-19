@@ -1,16 +1,4 @@
-<?php include('function.php'); 
 
-// SQL so'rovi orqali kategoriya ma'lumotlarini olish
-$s = "SELECT * FROM category";
-$result = mysqli_query($cn, $s);
-
-// Agar so'rovda xatolik yuz bersa, xatoni ko'rsatish
-if (!$result) {
-    echo "Xatolik yuz berdi: " . mysqli_error($cn);
-    exit();
-}
-
-?>
 
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
