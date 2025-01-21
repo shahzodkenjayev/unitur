@@ -34,128 +34,86 @@ function toggleMenu() {
 <!--header-->
 <div class="header-top">
     <!--container-->
-<div class="container">
-    <div class="top-nav">
-        <div class="logo">
-            <a href="#"><img src="images/logo.png" id="section-1" width="120" height="25" class="img-responsive" alt="UNITUR"/></a>
+    <div class="container">
+        <div class="top-nav">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" id="section-1" width="120" height="25" class="img-responsive" alt="UNITUR"/></a>
+            </div>
+            <div class="menu">
+                <!-- Menu icon for mobile -->
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span> 
+                <ul id="nav" class="nav-list">
+                    <li><a href="#section-1">Bosh sahifa</a></li>
+                    <li><a href="#section-2">Biz haqimizda</a></li>
+                    <li><a href="#section-3">Eng mashhur sayohatlar</a></li>
+                    <li><a href="category.php">Kategoriyalar</a></li>
+                    <li><a href="#section-4">Reklamalar</a></li>
+                    <li><a href="#section-5">Aloqa</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Til</a>
+                        <div class="dropdown-content">
+                            <a href="?lang=uz">
+                                <img src="images/uz.png" alt="O'zbek" class="flag-icon"/> O'zbek tili
+                            </a>
+                            <a href="index_ru.html">
+                                <img src="images/ru.png" alt="Rus" class="flag-icon"/> Rus tili
+                            </a>
+                            <a href="index_eng.html">
+                                <img src="images/eng.png" alt="Ingliz" class="flag-icon"/> Ingliz tili
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="menu">
-            <!-- Menu icon for mobile -->
-            <span class="menu-icon" onclick="toggleMenu()">&#9776;</span> 
-            <ul id="nav" class="nav-list">
-                <li><a href="#section-1">Bosh sahifa</a></li>
-                <li><a href="#section-2">Biz haqimizda</a></li>
-                <li><a href="#section-3">Eng mashhur sayohatlar</a></li>
-                <li><a href="category.php">Kategoriyalar</a></li>
-                <li><a href="#section-4">Reklamalar</a></li>
-                <li><a href="#section-5">Aloqa</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)" class="dropbtn">Til</a>
-                    <div class="dropdown-content">
-                        <a href="?lang=uz">
-                            <img src="images/uz.png" alt="O'zbek" class="flag-icon"/> O'zbek tili
-                        </a>
-                        <a href="index_ru.html">
-                            <img src="images/ru.png" alt="Rus" class="flag-icon"/> Rus tili
-                        </a>
-                        <a href="index_eng.html">
-                            <img src="images/eng.png" alt="Ingliz" class="flag-icon"/> Ingliz tili
-                        </a>
-                    </div>
-                </li>
-            </ul>
-        </div>
+        <div class="clearfix"> </div>
     </div>
-    <div class="clearfix"> </div>
+    <!--/container-->
 </div>
-
 <style>
-/* Mobil menyu uchun umumiy uslublar */
-.menu-icon {
-    display: none;
-    font-size: 28px;
-    cursor: pointer;
-}
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
 
-.nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    gap: 15px;
-}
+    .dropbtn {
+        cursor: pointer;
+    }
 
-.nav-list li {
-    position: relative;
-}
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        right: 0;
+        background-color: #f9f9f9;
+        min-width: 180px;
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 
-.nav-list a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px;
-}
+    .dropdown-content a {
+        color: black;
+        padding: 10px 15px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+    }
 
-.nav-list .dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #f9f9f9;
-    min-width: 150px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
 
-.nav-list .dropdown-content a {
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    color: black;
-    text-decoration: none;
-}
+    .dropdown-content .flag-icon {
+        width: 25px;
+        height: auto;
+        margin-right: 10px;
+        border: none;
+    }
 
-.nav-list .dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.nav-list .dropdown:hover .dropdown-content {
-    display: block;
-}
-
-/* Mobil rejim uchun uslublar */
-@media screen and (max-width: 768px) {
-    .menu-icon {
+    .dropdown:hover .dropdown-content {
         display: block;
     }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        background-color: #fff;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    }
-
-    .nav-list.active {
-        display: flex;
-    }
-
-    .nav-list a {
-        padding: 15px;
-        border-bottom: 1px solid #ddd;
-    }
-
-    .nav-list .dropdown-content {
-        position: relative;
-        top: 0;
-        left: 0;
-    }
-}
 </style>
-
 
 
 
