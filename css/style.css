@@ -69,11 +69,8 @@ text-align:justify;
 
     /* Menyu elementlari */
     .menu ul li {
-        color: black;
-        padding: 10px 15px;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
+        padding: 12px;
+        text-align: left;
     }
 
     .menu ul li a {
