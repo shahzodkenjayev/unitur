@@ -1,1 +1,600 @@
-Test
+<!DOCTYPE html>
+<html>
+<head>
+<title>TRAVEL | UNITUR </title>
+<link rel="icon" href="favicon.png" type="image/x-icon">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+<link href="css/bootstrap.css" rel='stylesheet' type='text/css'/>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!--js--> 
+<script src="https://cdn.rawgit.com/viljamis/ResponsiveSlides.js/master/responsiveslides.min.js"></script>
+<script>
+// JavaScript for showing menu icon when clicked on mobile
+function toggleMenu() {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('active');
+}
+</script>
+	
+<script src="js/jquery.min.js"></script>
+<!--/js-->
+<!--animated-css-->
+<link href="css/animate.css" rel="stylesheet" type="text/css" media="all">
+<script src="js/wow.min.js"></script>
+<script>
+ new WOW().init();
+</script>
+<!--/animated-css-->
+</head>
+<body>
+<!--header-->
+<div class="header-top">
+    <!--container-->
+    <div class="container">
+        <div class="top-nav">
+            <div class="logo">
+                <a href="#"><img src="images/logo.png" id="section-1" width="120" height="25" class="img-responsive" alt="UNITUR"/></a>
+            </div>
+            <div class="menu">
+                <!-- Menu icon for mobile -->
+                <span class="menu-icon" onclick="toggleMenu()">&#9776;</span> 
+                <ul id="nav" class="nav-list">
+                    <li><a href="#section-1">Home</a></li>
+                    <li><a href="#section-2">About Us</a></li>
+                    <li><a href="#section-3">Most Popular Tours</a></li>
+                    <li><a href="https://dev.unitur.uz/">Categories</a></li>
+                    <li><a href="#section-4">Advertisements</a></li>
+                    <li><a href="#section-5">Contact</a></li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0)" class="dropbtn">Language</a>
+                        <div class="dropdown-content">
+			    <a href="index.html">
+                                <img src="images/uz.png" alt="uz" class="flag-icon"/> Uzbek
+                            </a>
+                            <a href="index_ru.html">
+                                <img src="images/ru.png" alt="rus" class="flag-icon"/> Russian
+                            </a>
+                            <a href="index_eng.html">
+                                <img src="images/eng.png" alt="eng" class="flag-icon"/> English
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="clearfix"> </div>
+    </div>
+    <!--/container-->
+</div>
+<style>
+	/* Dropdown menu styles */
+.dropdown {
+    position: relative !important;
+    display: inline-block !important;
+}
+
+.dropbtn {
+    cursor: pointer !important;
+}
+
+.dropdown-content {
+    display: none !important;
+    position: absolute !important;
+    right: 0 !important;
+    background-color: #f9f9f9 !important;
+    min-width: 180px !important;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2) !important;
+    z-index: 1 !important;
+}
+
+.dropdown-content a {
+    color: black !important;
+    padding: 10px 15px !important;
+    text-decoration: none !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1 !important;
+}
+
+.dropdown-content .flag-icon {
+    width: 25px !important;
+    height: auto !important;
+    margin-right: 10px !important;
+    border: none !important;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block !important;
+}
+
+</style>
+
+
+<!--/sticky-->
+<!---banner--->
+<!----start-slider-script---->
+			<script src="js/responsiveslides.min.js"></script>
+			 <script>
+			    $(function () {
+			      // Slider 4
+			      $("#slider4").responsiveSlides({
+			        auto: true,
+			        pager: true,
+			        nav: true,
+			        speed: 500,
+			        namespace: "callbacks",
+			        before: function () {
+			          $('.events').append("<li>before event fired.</li>");
+			        },
+			        after: function () {
+			          $('.events').append("<li>after event fired.</li>");
+			        }
+			      });
+			    });
+			  </script>
+			<!----//End-slider-script---->
+			<!-- Slider 4 -->
+			<div id="section-1" class="section">
+			    <div id="top" class="callbacks_container">
+			      <ul class="rslides" id="slider4">
+			        <li>
+			          <img src="images/banner.png" alt="">
+					  <div class="caption">
+			     	  		<div class="header-info">
+							<h2><a href="#">Think about resting this weekend</a></h2>
+							<lable></lable>
+							<h2><a href="#">UNITUR</a></h2>
+							</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="images/beach2.jpg" alt="">
+			        <div class="caption">
+			          	<div class="header-info">
+							<h2><a href="#">Think about resting this weekend</a></h2>
+							<lable></lable>
+							<h2><a href="#">UNITUR</a></h2>
+							</div>
+			          </div>
+			        </li>
+			        <li>
+			          <img src="images/beach3.jpg" alt="">
+			          <div class="caption">
+			          	<div class="header-info">
+							<h2><a href="#">Think about resting this weekend</a></h2>
+							<lable></lable>
+							<h2><a href="#">UNITUR</a></h2>
+							</div>
+			          </div>
+			        </li>
+					<li>
+			          <img src="images/beach4.jpg" alt="">
+			          <div class="caption">
+			          	<div class="header-info">
+							<h2><a href="#">Think about resting this weekend</a></h2>
+							<lable></lable>
+							<h2><a href="#">UNITUR</a></h2>
+							</div>
+			          </div>
+			        </li>
+			      </ul>
+			    </div>
+		 <div class="clearfix"></div>	
+	         
+
+		<!----- //End-slider---->
+
+
+				
+<!---banner--->	
+	<div class="about section" id="section-2">
+	  <div class="about-head text-center">
+	  <h3>ABOUT US</h3>
+	  <span></span><img src="images/about-img.png" alt=""><span></span>
+	  </div>
+	   <div class="container">		  
+		 <div class="col-md-4 about-grids">
+			 <h4><span class="icon1"></span>Best Destinations</h4>
+			 <p>For some unknown reason, all troubles and pain begin from boredom. The main source of all these issues is being stuck in one place. Travel.</p>
+		 </div>
+		 <div class="col-md-4 about-grids grid2">
+			 <h4><span class="icon2"></span>Trust and Safety</h4>
+			 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+			 doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+		 </div>
+		 <div class="col-md-4 about-grids">
+			 <h4><span class="icon3"></span>Group and Savings</h4>
+			 <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium 
+			 doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+		 </div>
+	 </div>
+</div>
+<!--most popular tours-->	
+<div  class="section" id="section-3">
+<div id="portfolio" class="portfolio">
+   <div class="top-tours-head text-center">
+		  <h3>THE MOST POPULAR TOURS</h3>
+		  <span></span><img src="images/star.png" alt=""><span></span>
+		  <div class="container">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+				   Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+		  </div>
+		  </div>
+	      <ul id="filters" class="clearfix wow bounceIn" data-wow-delay="0.4s">
+			<li><span class="filter active" data-filter="app card icon logo fun">ALL</span></li>
+			<li><span class="filter" data-filter="app">Domestic Tours</span></li>
+			<li><span class="filter" data-filter="card">International Tours</span></li>
+			<li><span class="filter" data-filter="icon">Short-term Tours</span></li>
+			<li><span class="filter" data-filter="fun">Long-term Tours</span></li>
+	        </ul>
+ <div id="portfoliolist">
+					<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
+							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+						     <img src="images/t1.jpg" class="img-responsive" alt=""/></a>
+							</div>
+					</div>				
+					<div class="portfolio app mix_all" data-cat="app" style="display: inline-block; opacity: 1;">
+						<div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">		
+							<a href="#" class="b-link-stripe b-animate-go  thickbox play-icon popup-with-zoom-anim">
+						     <img src="images/t2.jpg" class="img-responsive" alt=""/></a>
+                             </div>
+					</div>	
+<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">        
+        <a href="#" class="b-link-stripe b-animate-go thickbox play-icon popup-with-zoom-anim">
+            <img src="images/t3.jpg" class="img-responsive" alt=""/></a>
+    </div>
+</div>                
+<div class="portfolio icon mix_all" data-cat="icon" style="display: inline-block; opacity: 1;">
+    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">        
+        <a href="#" class="b-link-stripe b-animate-go thickbox play-icon popup-with-zoom-anim">
+            <img src="images/t4.jpg" class="img-responsive" alt=""/></a>
+    </div>
+</div>    
+<div class="portfolio card mix_all" data-cat="card" style="display: inline-block; opacity: 1;">
+    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">        
+        <a href="#" class="b-link-stripe b-animate-go thickbox play-icon popup-with-zoom-anim">
+            <img src="images/t5.jpg" class="img-responsive" alt=""/></a>
+    </div>
+</div>            
+<div class="portfolio fun mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
+    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">        
+        <a href="#" class="b-link-stripe b-animate-go thickbox play-icon popup-with-zoom-anim">
+            <img src="images/t6.jpg" class="img-responsive" alt=""/></a>
+    </div>
+</div>
+<div class="portfolio fun mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
+    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">        
+        <a href="#" class="b-link-stripe b-animate-go thickbox play-icon popup-with-zoom-anim">
+            <img src="images/t7.jpg" class="img-responsive" alt=""/></a>
+    </div>
+</div>
+<div class="portfolio icon mix_all" data-cat="fun" style="display: inline-block; opacity: 1;">
+    <div class="portfolio-wrapper wow bounceIn" data-wow-delay="0.4s">        
+        <a href="#" class="b-link-stripe b-animate-go thickbox play-icon popup-with-zoom-anim">
+            <img src="images/t8.jpg" class="img-responsive" alt=""/></a>
+    </div>
+</div>
+<div class="clearfix"></div>    
+</div>
+
+</div>
+</div>  
+<!-- Travel Guide -->
+<div class="tour-guides section" id="section-4">
+    <div class="tour-guides-head text-center">
+        <h3>Travel Guides</h3>
+        <img src="images/t2.jpg" class="img-responsive" alt=""/>
+        <div class="container">
+            <p>“Unitur” international travel agency, a trusted leader in travel and medical tourism.</p>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <!-- Necessary JS files for Owl carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet">
+    <script src="js/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#owl-demo").owlCarousel({
+            items: 1,
+            lazyLoad: true,
+            autoPlay: true,
+            navigation: false,
+            navigationText: false,
+            pagination: true,
+        });
+    });
+    </script>
+    <!-- //Necessary JS files for Owl carousel -->
+    <div id="owl-demo" class="owl-carousel">
+        <div class="item text-center guide-sliders">
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/1.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">Unitur</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/2.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">Unitur</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/3.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">Unitur</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/4.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>   
+        </div>
+        <div class="item text-center guide-sliders">
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/5.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/6.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/7.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/8.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>   
+        </div>
+        <div class="item text-center guide-sliders">
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/9.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/10.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/11.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">Alize SmithUNITUR</a></p>
+            </div>
+            <div class="col-md-3 image-grid">
+                <img src="images/projectpics/12.jpg" class="equal-size">
+                <div class="guide-caption">
+                <span></span>
+                </div>
+                <p><a href="#">UNITUR</a></p>
+            </div>   
+        </div>
+    </div>
+</div>
+<div class="item text-center guide-sliders">
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/13.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">UNITUR</a></p>
+  </div>
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/14.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">UNITUR</a></p>
+  </div>
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/15.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">UNITUR</a></p>
+  </div>
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/16.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">Unitur</a></p>
+  </div>
+</div>
+<div class="item text-center guide-slide">
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/17.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">Unitur</a></p>
+  </div>
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/18.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">Unitur</a></p>
+  </div>
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/19.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">UNITUR</a></p>
+  </div>
+  <div class="col-md-3 image-grid">
+    <img src="images/projectpics/20.jpg" class="equal-size">
+    <div class="guide-caption">
+      <span></span>
+    </div>
+    <p><a href="#">UNITUR</a></p>
+  </div>
+</div>
+
+<!--client-say-->
+<div class="client-say">
+  <div class="client-say-layer">
+    <div class="client-say-head text-center">
+      <h3>Client Opinion</h3>
+      <span></span><img src="images/face.png" alt=""><span></span>
+      <!-- required-jsfiles-for owl -->
+      <link href="css/owl.carousel.css" rel="stylesheet">
+      <script src="js/owl.carousel.js"></script>
+      <script>
+      $(document).ready(function() {
+        $("#owl-demo1").owlCarousel({
+          items : 1,
+          lazyLoad : true,
+          autoPlay : true,
+          navigation : false,
+          navigationText :  false,
+          pagination : true,
+        });
+      });
+      </script>
+      <!-- //required-jsfiles-for owl -->
+      <div id="owl-demo1" class="owl-carousel">
+        <div class="item">
+          <div class="client-say-info">
+            <p><img src="images/dots1.png" alt="#">Unitur invites you to travel to the most beautiful places in the world. Our services provide not only relaxation but also new experiences and unforgettable moments. We provide all the opportunities to make each journey perfect. When you travel with us, you are ensured convenience, safety, and quality service.<img src="images/dots2.png" alt="#"></p>
+            <h4>Anna Smith</h4>
+            <h6><span></span></h6>
+          </div>
+        </div>
+        <div class="item">
+          <div class="client-say-info">
+            <p><img src="images/dots1.png" alt="#">Unitur operates to offer you the best travel and leisure opportunities. Our services ensure not only discovering new places but also making you feel comfortable and peaceful. By planning each trip with us, you will have a quality and unique travel experience. Plan your trip with us and get ready to explore new worlds.<img src="images/dots2.png" alt="#"></p>
+            <h4>Unitur</h4>
+            <h6><span></span></h6>
+          </div>
+        </div>
+        <div class="item">
+          <div class="client-say-info">
+            <p><img src="images/dots1.png" alt="#">Welcome to Unitur! We offer the best travel opportunities. Our goal is to create comfort for our customers, provide the best service, and make each trip unforgettable. Contact us to plan your trip, relax, and explore new places. Our experienced team always works considering your comfort and needs.<img src="images/dots2.png" alt="#"></p>
+            <h4>Smith</h4>
+            <h6><span></span></h6>
+          </div>
+        </div>
+        <div class="item">
+          <div class="client-say-info">
+            <p><img src="images/dots1.png" alt="#">Welcome to Unitur! We are ready to provide you with the best travel experience. Through our services, you can enjoy unforgettable vacations in different corners of the world. Traveling to your dream destinations is easy and convenient with us. Our team is always ready to provide you with the best service. Start your journey with Unitur!<img src="images/dots2.png" alt="#"></p>
+            <h4>Unitur</h4>
+            <h6><span></span></h6>
+          </div>
+        </div>
+        <div class="item">
+          <div class="client-say-info">
+            <p><img src="images/dots1.png" alt="#">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.<img src="images/dots2.png" alt="#"></p>
+            <h4>Unitur</h4>
+            <h6><span></span></h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/client-say-->
+
+<div id="section-5" class="contact section">
+  <div class="contact-head text-center">
+    <h3>CONTACT US</h3>
+    <span></span><img src="images/mail.png" alt=""><span></span>
+    <div class="contact-grids">
+      <div class="container">
+        <div class="col-md-4 address">
+          <h4>"We bring worlds closer."</h4>
+          <p>Now traveling is easier!</p>
+          <h5><span class="img1"></span>(+998) 78-777-11-11&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;+99878 777 11-11</h5>
+          <h5><span class="img2"></span><a href="#">unitur.uz&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;info@unitur.uz</a></h5>
+          <h5><span class="img3"></span>Tashkent, Bektemir District, Husayn Baykaro Street, 117th House.</h5>
+        </div>
+        <div class="col-md-8 contact">  
+          <form>
+            <input type="text" class="text" value=" Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your Name';}">
+            <input type="text" class="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Your mail';}">
+            <textarea onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Enter Message Here';">Message</textarea>
+            <input type="submit" value="Send">
+            <div class="clearfix"></div>
+          </form>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+    <div class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2845.6396685868312!2d69.36468672032206!3d41.24905231977697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae5f55a2a55a39%3A0xd85b8a92734e9534!2sProfi%20University%20-%20Bektemir%20tumani!5e1!3m2!1suz!2s!4v1737231560211!5m2!1suz!2s" frameborder="0" style="border:0"></iframe>
+      <span></span>
+    </div>
+  </div>
+</div>
+
+<div class="footer">    
+  <div class="container">
+    <div class="footer-grids">
+      <div class="col-md-4 footer-left">
+        <img src="images/logo1.png" width="120" height="50" class="img-responsive" alt="UNITUR"/>
+        <p>Unitur.uz, the organization that organizes the most popular travels in Uzbekistan, and the team of profiuniversity.uz are always with you during your journey.</p>
+      </div>
+      <div class="col-md-4 footer-middle">
+        <h3>Latest News</h3>
+        <div class="footer-list">
+          <ul>
+            <li><a href="#"><span></span>Start traveling around the world with Unitur.</a></li> 
+            <li><a href="#"><span></span>The pleasure of travelers.</a></li> 
+            <li><a href="#"><span></span>The most popular religious trips await you.</a></li> 
+            <li><a href="#"><span></span>Explore the news.</a></li> 
+            <li><a href="#"><span></span>No one wants to stop enjoying, because it's joy itself.</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-4 footer-right">
+        <h3>Follow Us</h3>
+        <ul>
+          <li><i class="fa-brands fa-telegram"></i><a href="https://t.me/shahzodkenjayev" class="fb"> Telegram</a></li>
+          <li><i class="fa-brands fa-instagram"></i><a href="https://www.instagram.com/unitouruz" class="insta"> Instagram</a></li>
+          <li><a href="https://profiuniversity.uz" class="gplus"> Profiuniversity</a></li>
+        </ul>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
